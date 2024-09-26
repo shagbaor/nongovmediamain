@@ -1,0 +1,4887 @@
+<!DOCTYPE html>
+<html lang="" class="webkit safari safari17 mac js">
+  <head>
+    <!---
+ ___  ___  ________  ________  ___  ________  ________  ________           ___       _______   ________ _________
+|\  \|\  \|\   __  \|\   __  \|\  \|\_____  \|\   __  \|\   ___  \        |\  \     |\  ___ \ |\  _____\\___   ___\
+\ \  \\\  \ \  \|\  \ \  \|\  \ \  \\|___/  /\ \  \|\  \ \  \\ \  \       \ \  \    \ \   __/|\ \  \__/\|___ \  \_|
+ \ \   __  \ \  \\\  \ \   _  _\ \  \   /  / /\ \  \\\  \ \  \\ \  \       \ \  \    \ \  \_|/_\ \   __\    \ \  \
+  \ \  \ \  \ \  \\\  \ \  \\  \\ \  \ /  /_/__\ \  \\\  \ \  \\ \  \       \ \  \____\ \  \_|\ \ \  \_|     \ \  \
+   \ \__\ \__\ \_______\ \__\\ _\\ \__\\________\ \_______\ \__\\ \__\       \ \_______\ \_______\ \__\       \ \__\
+    \|__|\|__|\|_______|\|__|\|__|\|__|\|_______|\|_______|\|__| \|__|        \|_______|\|_______|\|__|        \|__|
+-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="js/turbolinks-2.5.3-format-b802e11287adb103d1cb3e2f99426bc12854d0b0f06d9463b37099f7b814e087.js"></script>
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <script type="text/javascript">
+      window.NREUM || (NREUM = {});
+      NREUM.info = {
+        beacon: "bam.nr-data.net",
+        errorBeacon: "bam.nr-data.net",
+        licenseKey: "dcbde81dc9",
+        applicationID: "77525617",
+        transactionName: "IlsMTEJWDl4ERBZIEwNYC1sfSgpdFg==",
+        queueTime: 2,
+        applicationTime: 318,
+        agent: "",
+      };
+    </script>
+    <script type="text/javascript">
+      (window.NREUM || (NREUM = {})).init = {
+        privacy: { cookies_enabled: true },
+        ajax: { deny_list: [] },
+        session_replay: {
+          sampling_rate: 0.1,
+          mask_text_selector: "*",
+          block_selector: "",
+          mask_input_options: {},
+          mask_all_inputs: true,
+          enabled: true,
+          error_sampling_rate: 1.0,
+        },
+        session_trace: {
+          sampling_rate: 0.0,
+          mode: "FIXED_RATE",
+          enabled: true,
+          error_sampling_rate: 0.0,
+        },
+      };
+      (window.NREUM || (NREUM = {})).loader_config = {
+        xpid: "VQAAUVBXChAHU1RQAgcGUQ==",
+        licenseKey: "dcbde81dc9",
+        applicationID: "77525617",
+      }; /*! For license information please see nr-loader-full-1.266.0.min.js.LICENSE.txt */
+      (() => {
+        var e,
+          t,
+          r = {
+            8122: (e, t, r) => {
+              "use strict";
+              r.d(t, { a: () => i });
+              var n = r(944);
+              function i(e, t) {
+                try {
+                  if (!e || "object" != typeof e) return (0, n.R)(3);
+                  if (!t || "object" != typeof t) return (0, n.R)(4);
+                  const r = Object.create(
+                      Object.getPrototypeOf(t),
+                      Object.getOwnPropertyDescriptors(t)
+                    ),
+                    o = 0 === Object.keys(r).length ? e : r;
+                  for (let a in o)
+                    if (void 0 !== e[a])
+                      try {
+                        if (null === e[a]) {
+                          r[a] = null;
+                          continue;
+                        }
+                        Array.isArray(e[a]) && Array.isArray(t[a])
+                          ? (r[a] = Array.from(new Set([...e[a], ...t[a]])))
+                          : "object" == typeof e[a] && "object" == typeof t[a]
+                          ? (r[a] = i(e[a], t[a]))
+                          : (r[a] = e[a]);
+                      } catch (e) {
+                        (0, n.R)(1, e);
+                      }
+                  return r;
+                } catch (e) {
+                  (0, n.R)(2, e);
+                }
+              }
+            },
+            2555: (e, t, r) => {
+              "use strict";
+              r.d(t, { Vp: () => c, fn: () => s, x1: () => u });
+              var n = r(384),
+                i = r(8122);
+              const o = {
+                  beacon: n.NT.beacon,
+                  errorBeacon: n.NT.errorBeacon,
+                  licenseKey: void 0,
+                  applicationID: void 0,
+                  sa: void 0,
+                  queueTime: void 0,
+                  applicationTime: void 0,
+                  ttGuid: void 0,
+                  user: void 0,
+                  account: void 0,
+                  product: void 0,
+                  extra: void 0,
+                  jsAttributes: {},
+                  userAttributes: void 0,
+                  atts: void 0,
+                  transactionName: void 0,
+                  tNamePlain: void 0,
+                },
+                a = {};
+              function s(e) {
+                try {
+                  const t = c(e);
+                  return !!t.licenseKey && !!t.errorBeacon && !!t.applicationID;
+                } catch (e) {
+                  return !1;
+                }
+              }
+              function c(e) {
+                if (!e)
+                  throw new Error(
+                    "All info objects require an agent identifier!"
+                  );
+                if (!a[e])
+                  throw new Error("Info for ".concat(e, " was never set"));
+                return a[e];
+              }
+              function u(e, t) {
+                if (!e)
+                  throw new Error(
+                    "All info objects require an agent identifier!"
+                  );
+                a[e] = (0, i.a)(t, o);
+                const r = (0, n.nY)(e);
+                r && (r.info = a[e]);
+              }
+            },
+            9417: (e, t, r) => {
+              "use strict";
+              r.d(t, { D0: () => h, gD: () => p, xN: () => g });
+              var n = r(993);
+              const i = (e) => {
+                if (!e || "string" != typeof e) return !1;
+                try {
+                  document.createDocumentFragment().querySelector(e);
+                } catch {
+                  return !1;
+                }
+                return !0;
+              };
+              var o = r(2614),
+                a = r(944),
+                s = r(384),
+                c = r(8122);
+              const u = "[data-nr-mask]",
+                d = () => {
+                  const e = {
+                    mask_selector: "*",
+                    block_selector: "[data-nr-block]",
+                    mask_input_options: {
+                      color: !1,
+                      date: !1,
+                      "datetime-local": !1,
+                      email: !1,
+                      month: !1,
+                      number: !1,
+                      range: !1,
+                      search: !1,
+                      tel: !1,
+                      text: !1,
+                      time: !1,
+                      url: !1,
+                      week: !1,
+                      textarea: !1,
+                      select: !1,
+                      password: !0,
+                    },
+                  };
+                  return {
+                    ajax: {
+                      deny_list: void 0,
+                      block_internal: !0,
+                      enabled: !0,
+                      harvestTimeSeconds: 10,
+                      autoStart: !0,
+                    },
+                    distributed_tracing: {
+                      enabled: void 0,
+                      exclude_newrelic_header: void 0,
+                      cors_use_newrelic_header: void 0,
+                      cors_use_tracecontext_headers: void 0,
+                      allowed_origins: void 0,
+                    },
+                    feature_flags: [],
+                    generic_events: {
+                      enabled: !0,
+                      harvestTimeSeconds: 30,
+                      autoStart: !0,
+                    },
+                    harvest: { tooManyRequestsDelay: 60 },
+                    jserrors: {
+                      enabled: !0,
+                      harvestTimeSeconds: 10,
+                      autoStart: !0,
+                    },
+                    logging: {
+                      enabled: !0,
+                      harvestTimeSeconds: 10,
+                      autoStart: !0,
+                      level: n.p_.INFO,
+                    },
+                    metrics: { enabled: !0, autoStart: !0 },
+                    obfuscate: void 0,
+                    page_action: { enabled: !0 },
+                    page_view_event: { enabled: !0, autoStart: !0 },
+                    page_view_timing: {
+                      enabled: !0,
+                      harvestTimeSeconds: 30,
+                      autoStart: !0,
+                    },
+                    privacy: { cookies_enabled: !0 },
+                    proxy: { assets: void 0, beacon: void 0 },
+                    session: { expiresMs: o.wk, inactiveMs: o.BB },
+                    session_replay: {
+                      autoStart: !0,
+                      enabled: !1,
+                      harvestTimeSeconds: 60,
+                      preload: !1,
+                      sampling_rate: 10,
+                      error_sampling_rate: 100,
+                      collect_fonts: !1,
+                      inline_images: !1,
+                      inline_stylesheet: !0,
+                      fix_stylesheets: !0,
+                      mask_all_inputs: !0,
+                      get mask_text_selector() {
+                        return e.mask_selector;
+                      },
+                      set mask_text_selector(t) {
+                        i(t)
+                          ? (e.mask_selector = "".concat(t, ",").concat(u))
+                          : "" === t || null === t
+                          ? (e.mask_selector = u)
+                          : (0, a.R)(5, t);
+                      },
+                      get block_class() {
+                        return "nr-block";
+                      },
+                      get ignore_class() {
+                        return "nr-ignore";
+                      },
+                      get mask_text_class() {
+                        return "nr-mask";
+                      },
+                      get block_selector() {
+                        return e.block_selector;
+                      },
+                      set block_selector(t) {
+                        i(t)
+                          ? (e.block_selector += ",".concat(t))
+                          : "" !== t && (0, a.R)(6, t);
+                      },
+                      get mask_input_options() {
+                        return e.mask_input_options;
+                      },
+                      set mask_input_options(t) {
+                        t && "object" == typeof t
+                          ? (e.mask_input_options = { ...t, password: !0 })
+                          : (0, a.R)(7, t);
+                      },
+                    },
+                    session_trace: {
+                      enabled: !0,
+                      harvestTimeSeconds: 10,
+                      autoStart: !0,
+                    },
+                    soft_navigations: {
+                      enabled: !0,
+                      harvestTimeSeconds: 10,
+                      autoStart: !0,
+                    },
+                    spa: { enabled: !0, harvestTimeSeconds: 10, autoStart: !0 },
+                    ssl: void 0,
+                  };
+                },
+                l = {},
+                f = "All configuration objects require an agent identifier!";
+              function h(e) {
+                if (!e) throw new Error(f);
+                if (!l[e])
+                  throw new Error(
+                    "Configuration for ".concat(e, " was never set")
+                  );
+                return l[e];
+              }
+              function g(e, t) {
+                if (!e) throw new Error(f);
+                l[e] = (0, c.a)(t, d());
+                const r = (0, s.nY)(e);
+                r && (r.init = l[e]);
+              }
+              function p(e, t) {
+                if (!e) throw new Error(f);
+                var r = h(e);
+                if (r) {
+                  for (var n = t.split("."), i = 0; i < n.length - 1; i++)
+                    if ("object" != typeof (r = r[n[i]])) return;
+                  r = r[n[n.length - 1]];
+                }
+                return r;
+              }
+            },
+            5603: (e, t, r) => {
+              "use strict";
+              r.d(t, { a: () => c, o: () => s });
+              var n = r(384),
+                i = r(8122);
+              const o = {
+                  accountID: void 0,
+                  trustKey: void 0,
+                  agentID: void 0,
+                  licenseKey: void 0,
+                  applicationID: void 0,
+                  xpid: void 0,
+                },
+                a = {};
+              function s(e) {
+                if (!e)
+                  throw new Error(
+                    "All loader-config objects require an agent identifier!"
+                  );
+                if (!a[e])
+                  throw new Error(
+                    "LoaderConfig for ".concat(e, " was never set")
+                  );
+                return a[e];
+              }
+              function c(e, t) {
+                if (!e)
+                  throw new Error(
+                    "All loader-config objects require an agent identifier!"
+                  );
+                a[e] = (0, i.a)(t, o);
+                const r = (0, n.nY)(e);
+                r && (r.loader_config = a[e]);
+              }
+            },
+            3371: (e, t, r) => {
+              "use strict";
+              r.d(t, { V: () => f, f: () => l });
+              var n = r(8122),
+                i = r(384),
+                o = r(6154),
+                a = r(9324);
+              let s = 0;
+              const c = {
+                  buildEnv: a.F3,
+                  distMethod: a.Xs,
+                  version: a.xv,
+                  originTime: o.WN,
+                },
+                u = {
+                  customTransaction: void 0,
+                  disabled: !1,
+                  isolatedBacklog: !1,
+                  loaderType: void 0,
+                  maxBytes: 3e4,
+                  onerror: void 0,
+                  origin: "" + o.gm.location,
+                  ptid: void 0,
+                  releaseIds: {},
+                  appMetadata: {},
+                  session: void 0,
+                  denyList: void 0,
+                  timeKeeper: void 0,
+                  obfuscator: void 0,
+                },
+                d = {};
+              function l(e) {
+                if (!e)
+                  throw new Error(
+                    "All runtime objects require an agent identifier!"
+                  );
+                if (!d[e])
+                  throw new Error("Runtime for ".concat(e, " was never set"));
+                return d[e];
+              }
+              function f(e, t) {
+                if (!e)
+                  throw new Error(
+                    "All runtime objects require an agent identifier!"
+                  );
+                (d[e] = { ...(0, n.a)(t, u), ...c }),
+                  Object.hasOwnProperty.call(d[e], "harvestCount") ||
+                    Object.defineProperty(d[e], "harvestCount", {
+                      get: () => ++s,
+                    });
+                const r = (0, i.nY)(e);
+                r && (r.runtime = d[e]);
+              }
+            },
+            9324: (e, t, r) => {
+              "use strict";
+              r.d(t, { F3: () => i, Xs: () => o, Yq: () => a, xv: () => n });
+              const n = "1.266.0",
+                i = "PROD",
+                o = "CDN",
+                a = "2.0.0-alpha.12";
+            },
+            6154: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                OF: () => u,
+                RI: () => i,
+                Vr: () => f,
+                WN: () => h,
+                bv: () => o,
+                gm: () => a,
+                lR: () => l,
+                m: () => c,
+                mw: () => s,
+                sb: () => d,
+              });
+              var n = r(1863);
+              const i = "undefined" != typeof window && !!window.document,
+                o =
+                  "undefined" != typeof WorkerGlobalScope &&
+                  (("undefined" != typeof self &&
+                    self instanceof WorkerGlobalScope &&
+                    self.navigator instanceof WorkerNavigator) ||
+                    ("undefined" != typeof globalThis &&
+                      globalThis instanceof WorkerGlobalScope &&
+                      globalThis.navigator instanceof WorkerNavigator)),
+                a = i
+                  ? window
+                  : "undefined" != typeof WorkerGlobalScope &&
+                    (("undefined" != typeof self &&
+                      self instanceof WorkerGlobalScope &&
+                      self) ||
+                      ("undefined" != typeof globalThis &&
+                        globalThis instanceof WorkerGlobalScope &&
+                        globalThis)),
+                s = Boolean("hidden" === a?.document?.visibilityState),
+                c = "" + a?.location,
+                u = /iPad|iPhone|iPod/.test(a.navigator?.userAgent),
+                d = u && "undefined" == typeof SharedWorker,
+                l = (() => {
+                  const e = a.navigator?.userAgent?.match(
+                    /Firefox[/\s](\d+\.\d+)/
+                  );
+                  return Array.isArray(e) && e.length >= 2 ? +e[1] : 0;
+                })(),
+                f = !!a.navigator?.sendBeacon,
+                h = Date.now() - (0, n.t)();
+            },
+            4777: (e, t, r) => {
+              "use strict";
+              r.d(t, { J: () => o });
+              var n = r(944);
+              const i = { agentIdentifier: "", ee: void 0 };
+              class o {
+                constructor(e) {
+                  try {
+                    if ("object" != typeof e) return (0, n.R)(8);
+                    (this.sharedContext = {}),
+                      Object.assign(this.sharedContext, i),
+                      Object.entries(e).forEach(([e, t]) => {
+                        Object.keys(i).includes(e) &&
+                          (this.sharedContext[e] = t);
+                      });
+                  } catch (e) {
+                    (0, n.R)(9, e);
+                  }
+                }
+              }
+            },
+            7295: (e, t, r) => {
+              "use strict";
+              r.d(t, { Xv: () => a, gX: () => i, iW: () => o });
+              var n = [];
+              function i(e) {
+                if (!e || o(e)) return !1;
+                if (0 === n.length) return !0;
+                for (var t = 0; t < n.length; t++) {
+                  var r = n[t];
+                  if ("*" === r.hostname) return !1;
+                  if (s(r.hostname, e.hostname) && c(r.pathname, e.pathname))
+                    return !1;
+                }
+                return !0;
+              }
+              function o(e) {
+                return void 0 === e.hostname;
+              }
+              function a(e) {
+                if (((n = []), e && e.length))
+                  for (var t = 0; t < e.length; t++) {
+                    let r = e[t];
+                    if (!r) continue;
+                    0 === r.indexOf("http://")
+                      ? (r = r.substring(7))
+                      : 0 === r.indexOf("https://") && (r = r.substring(8));
+                    const i = r.indexOf("/");
+                    let o, a;
+                    i > 0
+                      ? ((o = r.substring(0, i)), (a = r.substring(i)))
+                      : ((o = r), (a = ""));
+                    let [s] = o.split(":");
+                    n.push({ hostname: s, pathname: a });
+                  }
+              }
+              function s(e, t) {
+                return (
+                  !(e.length > t.length) && t.indexOf(e) === t.length - e.length
+                );
+              }
+              function c(e, t) {
+                return (
+                  0 === e.indexOf("/") && (e = e.substring(1)),
+                  0 === t.indexOf("/") && (t = t.substring(1)),
+                  "" === e || e === t
+                );
+              }
+            },
+            1687: (e, t, r) => {
+              "use strict";
+              r.d(t, { Ak: () => c, Ze: () => l, x3: () => u });
+              var n = r(7836),
+                i = r(3606),
+                o = r(860),
+                a = r(2646);
+              const s = {};
+              function c(e, t) {
+                const r = { staged: !1, priority: o.P[t] || 0 };
+                d(e), s[e].get(t) || s[e].set(t, r);
+              }
+              function u(e, t) {
+                e &&
+                  s[e] &&
+                  (s[e].get(t) && s[e].delete(t),
+                  h(e, t, !1),
+                  s[e].size && f(e));
+              }
+              function d(e) {
+                if (!e) throw new Error("agentIdentifier required");
+                s[e] || (s[e] = new Map());
+              }
+              function l(e = "", t = "feature", r = !1) {
+                if ((d(e), !e || !s[e].get(t) || r)) return h(e, t);
+                (s[e].get(t).staged = !0), f(e);
+              }
+              function f(e) {
+                const t = Array.from(s[e]);
+                t.every(([e, t]) => t.staged) &&
+                  (t.sort((e, t) => e[1].priority - t[1].priority),
+                  t.forEach(([t]) => {
+                    s[e].delete(t), h(e, t);
+                  }));
+              }
+              function h(e, t, r = !0) {
+                const o = e ? n.ee.get(e) : n.ee,
+                  s = i.i.handlers;
+                if (!o.aborted && o.backlog && s) {
+                  if (r) {
+                    const e = o.backlog[t],
+                      r = s[t];
+                    if (r) {
+                      for (let t = 0; e && t < e.length; ++t) g(e[t], r);
+                      Object.entries(r).forEach(([e, t]) => {
+                        Object.values(t || {}).forEach((t) => {
+                          t[0]?.on &&
+                            t[0]?.context() instanceof a.y &&
+                            t[0].on(e, t[1]);
+                        });
+                      });
+                    }
+                  }
+                  o.isolatedBacklog || delete s[t],
+                    (o.backlog[t] = null),
+                    o.emit("drain-" + t, []);
+                }
+              }
+              function g(e, t) {
+                var r = e[1];
+                Object.values(t[r] || {}).forEach((t) => {
+                  var r = e[0];
+                  if (t[0] === r) {
+                    var n = t[1],
+                      i = e[3],
+                      o = e[2];
+                    n.apply(i, o);
+                  }
+                });
+              }
+            },
+            7836: (e, t, r) => {
+              "use strict";
+              r.d(t, { P: () => c, ee: () => u });
+              var n = r(384),
+                i = r(8990),
+                o = r(3371),
+                a = r(2646),
+                s = r(5607);
+              const c = "nr@context:".concat(s.W),
+                u = (function e(t, r) {
+                  var n = {},
+                    s = {},
+                    d = {},
+                    l = !1;
+                  try {
+                    l = 16 === r.length && (0, o.f)(r).isolatedBacklog;
+                  } catch (e) {}
+                  var f = {
+                    on: g,
+                    addEventListener: g,
+                    removeEventListener: function (e, t) {
+                      var r = n[e];
+                      if (!r) return;
+                      for (var i = 0; i < r.length; i++)
+                        r[i] === t && r.splice(i, 1);
+                    },
+                    emit: function (e, r, n, i, o) {
+                      !1 !== o && (o = !0);
+                      if (u.aborted && !i) return;
+                      t && o && t.emit(e, r, n);
+                      for (
+                        var a = h(n), c = p(e), d = c.length, l = 0;
+                        l < d;
+                        l++
+                      )
+                        c[l].apply(a, r);
+                      var g = v()[s[e]];
+                      g && g.push([f, e, r, a]);
+                      return a;
+                    },
+                    get: m,
+                    listeners: p,
+                    context: h,
+                    buffer: function (e, t) {
+                      const r = v();
+                      if (((t = t || "feature"), f.aborted)) return;
+                      Object.entries(e || {}).forEach(([e, n]) => {
+                        (s[n] = t), t in r || (r[t] = []);
+                      });
+                    },
+                    abort: function () {
+                      (f._aborted = !0),
+                        Object.keys(f.backlog).forEach((e) => {
+                          delete f.backlog[e];
+                        });
+                    },
+                    isBuffering: function (e) {
+                      return !!v()[s[e]];
+                    },
+                    debugId: r,
+                    backlog: l
+                      ? {}
+                      : t && "object" == typeof t.backlog
+                      ? t.backlog
+                      : {},
+                    isolatedBacklog: l,
+                  };
+                  return (
+                    Object.defineProperty(f, "aborted", {
+                      get: () => {
+                        let e = f._aborted || !1;
+                        return e || (t && (e = t.aborted), e);
+                      },
+                    }),
+                    f
+                  );
+                  function h(e) {
+                    return e && e instanceof a.y
+                      ? e
+                      : e
+                      ? (0, i.I)(e, c, () => new a.y(c))
+                      : new a.y(c);
+                  }
+                  function g(e, t) {
+                    n[e] = p(e).concat(t);
+                  }
+                  function p(e) {
+                    return n[e] || [];
+                  }
+                  function m(t) {
+                    return (d[t] = d[t] || e(f, t));
+                  }
+                  function v() {
+                    return f.backlog;
+                  }
+                })(void 0, "globalEE"),
+                d = (0, n.Zm)();
+              d.ee || (d.ee = u);
+            },
+            2646: (e, t, r) => {
+              "use strict";
+              r.d(t, { y: () => n });
+              class n {
+                constructor(e) {
+                  this.contextId = e;
+                }
+              }
+            },
+            9908: (e, t, r) => {
+              "use strict";
+              r.d(t, { d: () => n, p: () => i });
+              var n = r(7836).ee.get("handle");
+              function i(e, t, r, i, o) {
+                o
+                  ? (o.buffer([e], i), o.emit(e, t, r))
+                  : (n.buffer([e], i), n.emit(e, t, r));
+              }
+            },
+            3606: (e, t, r) => {
+              "use strict";
+              r.d(t, { i: () => o });
+              var n = r(9908);
+              o.on = a;
+              var i = (o.handlers = {});
+              function o(e, t, r, o) {
+                a(o || n.d, i, e, t, r);
+              }
+              function a(e, t, r, i, o) {
+                o || (o = "feature"), e || (e = n.d);
+                var a = (t[o] = t[o] || {});
+                (a[r] = a[r] || []).push([e, i]);
+              }
+            },
+            3878: (e, t, r) => {
+              "use strict";
+              r.d(t, { DD: () => c, jT: () => a, sp: () => s });
+              var n = r(6154);
+              let i = !1,
+                o = !1;
+              try {
+                const e = {
+                  get passive() {
+                    return (i = !0), !1;
+                  },
+                  get signal() {
+                    return (o = !0), !1;
+                  },
+                };
+                n.gm.addEventListener("test", null, e),
+                  n.gm.removeEventListener("test", null, e);
+              } catch (e) {}
+              function a(e, t) {
+                return i || o ? { capture: !!e, passive: i, signal: t } : !!e;
+              }
+              function s(e, t, r = !1, n) {
+                window.addEventListener(e, t, a(r, n));
+              }
+              function c(e, t, r = !1, n) {
+                document.addEventListener(e, t, a(r, n));
+              }
+            },
+            5607: (e, t, r) => {
+              "use strict";
+              r.d(t, { W: () => n });
+              const n = (0, r(9566).bz)();
+            },
+            9566: (e, t, r) => {
+              "use strict";
+              r.d(t, { LA: () => s, ZF: () => c, bz: () => a, el: () => u });
+              var n = r(6154);
+              const i = "xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx";
+              function o(e, t) {
+                return e ? 15 & e[t] : (16 * Math.random()) | 0;
+              }
+              function a() {
+                const e = n.gm?.crypto || n.gm?.msCrypto;
+                let t,
+                  r = 0;
+                return (
+                  e &&
+                    e.getRandomValues &&
+                    (t = e.getRandomValues(new Uint8Array(30))),
+                  i
+                    .split("")
+                    .map((e) =>
+                      "x" === e
+                        ? o(t, r++).toString(16)
+                        : "y" === e
+                        ? ((3 & o()) | 8).toString(16)
+                        : e
+                    )
+                    .join("")
+                );
+              }
+              function s(e) {
+                const t = n.gm?.crypto || n.gm?.msCrypto;
+                let r,
+                  i = 0;
+                t &&
+                  t.getRandomValues &&
+                  (r = t.getRandomValues(new Uint8Array(e)));
+                const a = [];
+                for (var s = 0; s < e; s++) a.push(o(r, i++).toString(16));
+                return a.join("");
+              }
+              function c() {
+                return s(16);
+              }
+              function u() {
+                return s(32);
+              }
+            },
+            2614: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                BB: () => a,
+                H3: () => n,
+                g: () => u,
+                iL: () => c,
+                tS: () => s,
+                uh: () => i,
+                wk: () => o,
+              });
+              const n = "NRBA",
+                i = "SESSION",
+                o = 144e5,
+                a = 18e5,
+                s = {
+                  STARTED: "session-started",
+                  PAUSE: "session-pause",
+                  RESET: "session-reset",
+                  RESUME: "session-resume",
+                  UPDATE: "session-update",
+                },
+                c = { SAME_TAB: "same-tab", CROSS_TAB: "cross-tab" },
+                u = { OFF: 0, FULL: 1, ERROR: 2 };
+            },
+            1863: (e, t, r) => {
+              "use strict";
+              function n() {
+                return Math.floor(performance.now());
+              }
+              r.d(t, { t: () => n });
+            },
+            7485: (e, t, r) => {
+              "use strict";
+              r.d(t, { D: () => i });
+              var n = r(6154);
+              function i(e) {
+                if (0 === (e || "").indexOf("data:"))
+                  return { protocol: "data" };
+                try {
+                  const t = new URL(e, location.href),
+                    r = {
+                      port: t.port,
+                      hostname: t.hostname,
+                      pathname: t.pathname,
+                      search: t.search,
+                      protocol: t.protocol.slice(0, t.protocol.indexOf(":")),
+                      sameOrigin:
+                        t.protocol === n.gm?.location?.protocol &&
+                        t.host === n.gm?.location?.host,
+                    };
+                  return (
+                    (r.port && "" !== r.port) ||
+                      ("http:" === t.protocol && (r.port = "80"),
+                      "https:" === t.protocol && (r.port = "443")),
+                    r.pathname && "" !== r.pathname
+                      ? r.pathname.startsWith("/") ||
+                        (r.pathname = "/".concat(r.pathname))
+                      : (r.pathname = "/"),
+                    r
+                  );
+                } catch (e) {
+                  return {};
+                }
+              }
+            },
+            944: (e, t, r) => {
+              "use strict";
+              function n(e, t) {
+                "function" == typeof console.debug &&
+                  console.debug(
+                    "New Relic Warning: https://github.com/newrelic/newrelic-browser-agent/blob/main/docs/warning-codes.md#".concat(
+                      e
+                    ),
+                    t
+                  );
+              }
+              r.d(t, { R: () => n });
+            },
+            5284: (e, t, r) => {
+              "use strict";
+              r.d(t, { t: () => c, B: () => s });
+              var n = r(7836),
+                i = r(6154);
+              const o = "newrelic";
+              const a = new Set(),
+                s = {};
+              function c(e, t) {
+                const r = n.ee.get(t);
+                (s[t] ??= {}),
+                  e &&
+                    "object" == typeof e &&
+                    (a.has(t) ||
+                      (r.emit("rumresp", [e]),
+                      (s[t] = e),
+                      a.add(t),
+                      (function (e = {}) {
+                        try {
+                          i.gm.dispatchEvent(new CustomEvent(o, { detail: e }));
+                        } catch (e) {}
+                      })({ loaded: !0 })));
+              }
+            },
+            8990: (e, t, r) => {
+              "use strict";
+              r.d(t, { I: () => i });
+              var n = Object.prototype.hasOwnProperty;
+              function i(e, t, r) {
+                if (n.call(e, t)) return e[t];
+                var i = r();
+                if (Object.defineProperty && Object.keys)
+                  try {
+                    return (
+                      Object.defineProperty(e, t, {
+                        value: i,
+                        writable: !0,
+                        enumerable: !1,
+                      }),
+                      i
+                    );
+                  } catch (e) {}
+                return (e[t] = i), i;
+              }
+            },
+            6389: (e, t, r) => {
+              "use strict";
+              function n(e, t = 500, r = {}) {
+                const n = r?.leading || !1;
+                let i;
+                return (...r) => {
+                  n &&
+                    void 0 === i &&
+                    (e.apply(this, r),
+                    (i = setTimeout(() => {
+                      i = clearTimeout(i);
+                    }, t))),
+                    n ||
+                      (clearTimeout(i),
+                      (i = setTimeout(() => {
+                        e.apply(this, r);
+                      }, t)));
+                };
+              }
+              function i(e) {
+                let t = !1;
+                return (...r) => {
+                  t || ((t = !0), e.apply(this, r));
+                };
+              }
+              r.d(t, { J: () => i, s: () => n });
+            },
+            3304: (e, t, r) => {
+              "use strict";
+              r.d(t, { A: () => o });
+              var n = r(7836);
+              const i = () => {
+                const e = new WeakSet();
+                return (t, r) => {
+                  if ("object" == typeof r && null !== r) {
+                    if (e.has(r)) return;
+                    e.add(r);
+                  }
+                  return r;
+                };
+              };
+              function o(e) {
+                try {
+                  return JSON.stringify(e, i());
+                } catch (e) {
+                  try {
+                    n.ee.emit("internal-error", [e]);
+                  } catch (e) {}
+                }
+              }
+            },
+            5289: (e, t, r) => {
+              "use strict";
+              r.d(t, { GG: () => o, sB: () => a });
+              var n = r(3878);
+              function i() {
+                return (
+                  "undefined" == typeof document ||
+                  "complete" === document.readyState
+                );
+              }
+              function o(e, t) {
+                if (i()) return e();
+                (0, n.sp)("load", e, t);
+              }
+              function a(e) {
+                if (i()) return e();
+                (0, n.DD)("DOMContentLoaded", e);
+              }
+            },
+            384: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                NT: () => o,
+                US: () => d,
+                Zm: () => a,
+                bQ: () => c,
+                dV: () => s,
+                nY: () => u,
+                pV: () => l,
+              });
+              var n = r(6154),
+                i = r(1863);
+              const o = {
+                beacon: "bam.nr-data.net",
+                errorBeacon: "bam.nr-data.net",
+              };
+              function a() {
+                return (
+                  n.gm.NREUM || (n.gm.NREUM = {}),
+                  void 0 === n.gm.newrelic && (n.gm.newrelic = n.gm.NREUM),
+                  n.gm.NREUM
+                );
+              }
+              function s() {
+                let e = a();
+                return (
+                  e.o ||
+                    (e.o = {
+                      ST: n.gm.setTimeout,
+                      SI: n.gm.setImmediate,
+                      CT: n.gm.clearTimeout,
+                      XHR: n.gm.XMLHttpRequest,
+                      REQ: n.gm.Request,
+                      EV: n.gm.Event,
+                      PR: n.gm.Promise,
+                      MO: n.gm.MutationObserver,
+                      FETCH: n.gm.fetch,
+                      WS: n.gm.WebSocket,
+                    }),
+                  e
+                );
+              }
+              function c(e, t) {
+                let r = a();
+                (r.initializedAgents ??= {}),
+                  (t.initializedAt = { ms: (0, i.t)(), date: new Date() }),
+                  (r.initializedAgents[e] = t);
+              }
+              function u(e) {
+                let t = a();
+                return t.initializedAgents?.[e];
+              }
+              function d(e, t) {
+                a()[e] = t;
+              }
+              function l() {
+                return (
+                  (function () {
+                    let e = a();
+                    const t = e.info || {};
+                    e.info = {
+                      beacon: o.beacon,
+                      errorBeacon: o.errorBeacon,
+                      ...t,
+                    };
+                  })(),
+                  (function () {
+                    let e = a();
+                    const t = e.init || {};
+                    e.init = { ...t };
+                  })(),
+                  s(),
+                  (function () {
+                    let e = a();
+                    const t = e.loader_config || {};
+                    e.loader_config = { ...t };
+                  })(),
+                  a()
+                );
+              }
+            },
+            2843: (e, t, r) => {
+              "use strict";
+              r.d(t, { u: () => i });
+              var n = r(3878);
+              function i(e, t = !1, r, i) {
+                (0, n.DD)(
+                  "visibilitychange",
+                  function () {
+                    if (t)
+                      return void (
+                        "hidden" === document.visibilityState && e()
+                      );
+                    e(document.visibilityState);
+                  },
+                  r,
+                  i
+                );
+              }
+            },
+            8139: (e, t, r) => {
+              "use strict";
+              r.d(t, { u: () => f });
+              var n = r(7836),
+                i = r(3434),
+                o = r(8990),
+                a = r(6154);
+              const s = {},
+                c = a.gm.XMLHttpRequest,
+                u = "addEventListener",
+                d = "removeEventListener",
+                l = "nr@wrapped:".concat(n.P);
+              function f(e) {
+                var t = (function (e) {
+                  return (e || n.ee).get("events");
+                })(e);
+                if (s[t.debugId]++) return t;
+                s[t.debugId] = 1;
+                var r = (0, i.YM)(t, !0);
+                function f(e) {
+                  r.inPlace(e, [u, d], "-", g);
+                }
+                function g(e, t) {
+                  return e[1];
+                }
+                return (
+                  "getPrototypeOf" in Object &&
+                    (a.RI && h(document, f), h(a.gm, f), h(c.prototype, f)),
+                  t.on(u + "-start", function (e, t) {
+                    var n = e[1];
+                    if (
+                      null !== n &&
+                      ("function" == typeof n || "object" == typeof n)
+                    ) {
+                      var i = (0, o.I)(n, l, function () {
+                        var e = {
+                          object: function () {
+                            if ("function" != typeof n.handleEvent) return;
+                            return n.handleEvent.apply(n, arguments);
+                          },
+                          function: n,
+                        }[typeof n];
+                        return e ? r(e, "fn-", null, e.name || "anonymous") : n;
+                      });
+                      this.wrapped = e[1] = i;
+                    }
+                  }),
+                  t.on(d + "-start", function (e) {
+                    e[1] = this.wrapped || e[1];
+                  }),
+                  t
+                );
+              }
+              function h(e, t, ...r) {
+                let n = e;
+                for (
+                  ;
+                  "object" == typeof n &&
+                  !Object.prototype.hasOwnProperty.call(n, u);
+
+                )
+                  n = Object.getPrototypeOf(n);
+                n && t(n, ...r);
+              }
+            },
+            3434: (e, t, r) => {
+              "use strict";
+              r.d(t, { YM: () => c });
+              var n = r(7836),
+                i = r(5607);
+              const o = "nr@original:".concat(i.W);
+              var a = Object.prototype.hasOwnProperty,
+                s = !1;
+              function c(e, t) {
+                return (
+                  e || (e = n.ee),
+                  (r.inPlace = function (e, t, n, i, o) {
+                    n || (n = "");
+                    const a = "-" === n.charAt(0);
+                    for (let s = 0; s < t.length; s++) {
+                      const c = t[s],
+                        u = e[c];
+                      d(u) || (e[c] = r(u, a ? c + n : n, i, c, o));
+                    }
+                  }),
+                  (r.flag = o),
+                  r
+                );
+                function r(t, r, n, s, c) {
+                  return d(t)
+                    ? t
+                    : (r || (r = ""),
+                      (nrWrapper[o] = t),
+                      (function (e, t, r) {
+                        if (Object.defineProperty && Object.keys)
+                          try {
+                            return (
+                              Object.keys(e).forEach(function (r) {
+                                Object.defineProperty(t, r, {
+                                  get: function () {
+                                    return e[r];
+                                  },
+                                  set: function (t) {
+                                    return (e[r] = t), t;
+                                  },
+                                });
+                              }),
+                              t
+                            );
+                          } catch (e) {
+                            u([e], r);
+                          }
+                        for (var n in e) a.call(e, n) && (t[n] = e[n]);
+                      })(t, nrWrapper, e),
+                      nrWrapper);
+                  function nrWrapper() {
+                    var o, a, d, l;
+                    try {
+                      (a = this),
+                        (o = [...arguments]),
+                        (d = "function" == typeof n ? n(o, a) : n || {});
+                    } catch (t) {
+                      u([t, "", [o, a, s], d], e);
+                    }
+                    i(r + "start", [o, a, s], d, c);
+                    try {
+                      return (l = t.apply(a, o));
+                    } catch (e) {
+                      throw (i(r + "err", [o, a, e], d, c), e);
+                    } finally {
+                      i(r + "end", [o, a, l], d, c);
+                    }
+                  }
+                }
+                function i(r, n, i, o) {
+                  if (!s || t) {
+                    var a = s;
+                    s = !0;
+                    try {
+                      e.emit(r, n, i, t, o);
+                    } catch (t) {
+                      u([t, r, n, i], e);
+                    }
+                    s = a;
+                  }
+                }
+              }
+              function u(e, t) {
+                t || (t = n.ee);
+                try {
+                  t.emit("internal-error", e);
+                } catch (e) {}
+              }
+              function d(e) {
+                return !(e && "function" == typeof e && e.apply && !e[o]);
+              }
+            },
+            9300: (e, t, r) => {
+              "use strict";
+              r.d(t, { T: () => n });
+              const n = r(860).K.ajax;
+            },
+            3333: (e, t, r) => {
+              "use strict";
+              r.d(t, { TZ: () => n });
+              const n = r(860).K.genericEvents;
+            },
+            6774: (e, t, r) => {
+              "use strict";
+              r.d(t, { T: () => n });
+              const n = r(860).K.jserrors;
+            },
+            993: (e, t, r) => {
+              "use strict";
+              r.d(t, { ET: () => o, TZ: () => a, p_: () => i });
+              var n = r(860);
+              const i = {
+                  ERROR: "ERROR",
+                  WARN: "WARN",
+                  INFO: "INFO",
+                  DEBUG: "DEBUG",
+                  TRACE: "TRACE",
+                },
+                o = "log",
+                a = n.K.logging;
+            },
+            3785: (e, t, r) => {
+              "use strict";
+              r.d(t, { R: () => c, b: () => u });
+              var n = r(9908),
+                i = r(1863),
+                o = r(860),
+                a = r(3969),
+                s = r(993);
+              function c(e, t, r = {}, c = s.p_.INFO) {
+                (0, n.p)(
+                  a.xV,
+                  ["API/logging/".concat(c.toLowerCase(), "/called")],
+                  void 0,
+                  o.K.metrics,
+                  e
+                ),
+                  (0, n.p)(s.ET, [(0, i.t)(), t, r, c], void 0, o.K.logging, e);
+              }
+              function u(e) {
+                return (
+                  "string" == typeof e &&
+                  Object.values(s.p_).some((t) => t === e.toUpperCase().trim())
+                );
+              }
+            },
+            3969: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                TZ: () => n,
+                XG: () => s,
+                rs: () => i,
+                xV: () => a,
+                z_: () => o,
+              });
+              const n = r(860).K.metrics,
+                i = "sm",
+                o = "cm",
+                a = "storeSupportabilityMetrics",
+                s = "storeEventMetrics";
+            },
+            6630: (e, t, r) => {
+              "use strict";
+              r.d(t, { T: () => n });
+              const n = r(860).K.pageViewEvent;
+            },
+            782: (e, t, r) => {
+              "use strict";
+              r.d(t, { T: () => n });
+              const n = r(860).K.pageViewTiming;
+            },
+            6344: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                BB: () => d,
+                G4: () => o,
+                Qb: () => l,
+                TZ: () => i,
+                Ug: () => a,
+                _s: () => s,
+                bc: () => u,
+                yP: () => c,
+              });
+              var n = r(2614);
+              const i = r(860).K.sessionReplay,
+                o = {
+                  RECORD: "recordReplay",
+                  PAUSE: "pauseReplay",
+                  REPLAY_RUNNING: "replayRunning",
+                  ERROR_DURING_REPLAY: "errorDuringReplay",
+                },
+                a = 0.12,
+                s = {
+                  DomContentLoaded: 0,
+                  Load: 1,
+                  FullSnapshot: 2,
+                  IncrementalSnapshot: 3,
+                  Meta: 4,
+                  Custom: 5,
+                },
+                c = { [n.g.ERROR]: 15e3, [n.g.FULL]: 3e5, [n.g.OFF]: 0 },
+                u = {
+                  RESET: { message: "Session was reset", sm: "Reset" },
+                  IMPORT: {
+                    message: "Recorder failed to import",
+                    sm: "Import",
+                  },
+                  TOO_MANY: {
+                    message: "429: Too Many Requests",
+                    sm: "Too-Many",
+                  },
+                  TOO_BIG: { message: "Payload was too large", sm: "Too-Big" },
+                  CROSS_TAB: {
+                    message: "Session Entity was set to OFF on another tab",
+                    sm: "Cross-Tab",
+                  },
+                  ENTITLEMENTS: {
+                    message:
+                      "Session Replay is not allowed and will not be started",
+                    sm: "Entitlement",
+                  },
+                },
+                d = 5e3,
+                l = { API: "api" };
+            },
+            5270: (e, t, r) => {
+              "use strict";
+              r.d(t, { Aw: () => c, CT: () => u, SR: () => s });
+              var n = r(384),
+                i = r(9417),
+                o = r(7767),
+                a = r(6154);
+              function s(e) {
+                return (
+                  !!(0, n.dV)().o.MO &&
+                  (0, o.V)(e) &&
+                  !0 === (0, i.gD)(e, "session_trace.enabled")
+                );
+              }
+              function c(e) {
+                return !0 === (0, i.gD)(e, "session_replay.preload") && s(e);
+              }
+              function u(e, t) {
+                const r = t.correctAbsoluteTimestamp(e);
+                return {
+                  originalTimestamp: e,
+                  correctedTimestamp: r,
+                  timestampDiff: e - r,
+                  originTime: a.WN,
+                  correctedOriginTime: t.correctedOriginTime,
+                  originTimeDiff: Math.floor(a.WN - t.correctedOriginTime),
+                };
+              }
+            },
+            3738: (e, t, r) => {
+              "use strict";
+              r.d(t, {
+                He: () => i,
+                Kp: () => s,
+                Lc: () => u,
+                Rz: () => d,
+                TZ: () => n,
+                bD: () => o,
+                d3: () => a,
+                jx: () => l,
+                uP: () => c,
+              });
+              const n = r(860).K.sessionTrace,
+                i = "bstResource",
+                o = "resource",
+                a = "-start",
+                s = "-end",
+                c = "fn" + a,
+                u = "fn" + s,
+                d = "pushState",
+                l = 1e3;
+            },
+            4234: (e, t, r) => {
+              "use strict";
+              r.d(t, { W: () => i });
+              var n = r(7836);
+              class i {
+                constructor(e, t, r) {
+                  (this.agentIdentifier = e),
+                    (this.aggregator = t),
+                    (this.ee = n.ee.get(e)),
+                    (this.featureName = r),
+                    (this.blocked = !1);
+                }
+              }
+            },
+            7767: (e, t, r) => {
+              "use strict";
+              r.d(t, { V: () => o });
+              var n = r(9417),
+                i = r(6154);
+              const o = (e) =>
+                i.RI && !0 === (0, n.gD)(e, "privacy.cookies_enabled");
+            },
+            425: (e, t, r) => {
+              "use strict";
+              r.d(t, { j: () => j });
+              var n = r(860),
+                i = r(2555),
+                o = r(3371),
+                a = r(9908),
+                s = r(7836),
+                c = r(1687),
+                u = r(5289),
+                d = r(6154),
+                l = r(944),
+                f = r(3969),
+                h = r(384),
+                g = r(6344);
+              const p = [
+                  "setErrorHandler",
+                  "finished",
+                  "addToTrace",
+                  "addRelease",
+                  "addPageAction",
+                  "setCurrentRouteName",
+                  "setPageViewName",
+                  "setCustomAttribute",
+                  "interaction",
+                  "noticeError",
+                  "setUserId",
+                  "setApplicationVersion",
+                  "start",
+                  g.G4.RECORD,
+                  g.G4.PAUSE,
+                  "log",
+                  "wrapLogger",
+                ],
+                m = ["setErrorHandler", "finished", "addToTrace", "addRelease"];
+              var v = r(1863),
+                b = r(2614),
+                y = r(993),
+                R = r(3785),
+                x = r(2646),
+                w = r(3434);
+              function T(e, t, r, n) {
+                if (
+                  "object" != typeof t ||
+                  !t ||
+                  "string" != typeof r ||
+                  !r ||
+                  "function" != typeof t[r]
+                )
+                  return (0, l.R)(29);
+                const i = (function (e) {
+                    return (e || s.ee).get("logger");
+                  })(e),
+                  o = (0, w.YM)(i),
+                  a = new x.y(s.P);
+                return (
+                  (a.level = n.level),
+                  (a.customAttributes = n.customAttributes),
+                  o.inPlace(t, [r], "wrap-logger-", a),
+                  i
+                );
+              }
+              function A() {
+                const e = (0, h.pV)();
+                p.forEach((t) => {
+                  e[t] = (...r) =>
+                    (function (t, ...r) {
+                      let n = [];
+                      return (
+                        Object.values(e.initializedAgents).forEach((e) => {
+                          e && e.api
+                            ? e.exposed && e.api[t] && n.push(e.api[t](...r))
+                            : (0, l.R)(38, t);
+                        }),
+                        n.length > 1 ? n : n[0]
+                      );
+                    })(t, ...r);
+                });
+              }
+              const E = {};
+              var S = r(9417),
+                O = r(5603),
+                _ = r(5284);
+              const I = (e) => {
+                const t = e.startsWith("http");
+                (e += "/"), (r.p = t ? e : "https://" + e);
+              };
+              let N = !1;
+              function j(e, t = {}, p, x) {
+                let {
+                  init: w,
+                  info: j,
+                  loader_config: P,
+                  runtime: C = {},
+                  exposed: k = !0,
+                } = t;
+                C.loaderType = p;
+                const D = (0, h.pV)();
+                j || ((w = D.init), (j = D.info), (P = D.loader_config)),
+                  (0, S.xN)(e.agentIdentifier, w || {}),
+                  (0, O.a)(e.agentIdentifier, P || {}),
+                  (j.jsAttributes ??= {}),
+                  d.bv && (j.jsAttributes.isWorker = !0),
+                  (0, i.x1)(e.agentIdentifier, j);
+                const H = (0, S.D0)(e.agentIdentifier),
+                  L = [j.beacon, j.errorBeacon];
+                N ||
+                  (H.proxy.assets &&
+                    (I(H.proxy.assets), L.push(H.proxy.assets)),
+                  H.proxy.beacon && L.push(H.proxy.beacon),
+                  A(),
+                  (0, h.US)("activatedFeatures", _.B),
+                  (e.runSoftNavOverSpa &&=
+                    !0 === H.soft_navigations.enabled &&
+                    H.feature_flags.includes("soft_nav"))),
+                  (C.denyList = [
+                    ...(H.ajax.deny_list || []),
+                    ...(H.ajax.block_internal ? L : []),
+                  ]),
+                  (C.ptid = e.agentIdentifier),
+                  (0, o.V)(e.agentIdentifier, C),
+                  (e.ee = s.ee.get(e.agentIdentifier)),
+                  void 0 === e.api &&
+                    (e.api = (function (e, t, h = !1) {
+                      t || (0, c.Ak)(e, "api");
+                      const p = {};
+                      var x = s.ee.get(e),
+                        w = x.get("tracer");
+                      (E[e] = b.g.OFF),
+                        x.on(g.G4.REPLAY_RUNNING, (t) => {
+                          E[e] = t;
+                        });
+                      var A = "api-",
+                        S = A + "ixn-";
+                      function O(t, r, n, o) {
+                        const a = (0, i.Vp)(e);
+                        return (
+                          null === r
+                            ? delete a.jsAttributes[t]
+                            : (0, i.x1)(e, {
+                                ...a,
+                                jsAttributes: { ...a.jsAttributes, [t]: r },
+                              }),
+                          N(
+                            A,
+                            n,
+                            !0,
+                            o || null === r ? "session" : void 0
+                          )(t, r)
+                        );
+                      }
+                      function _() {}
+                      (p.log = function (
+                        e,
+                        { customAttributes: t = {}, level: r = y.p_.INFO } = {}
+                      ) {
+                        (0, a.p)(
+                          f.xV,
+                          ["API/log/called"],
+                          void 0,
+                          n.K.metrics,
+                          x
+                        ),
+                          (0, R.R)(x, e, t, r);
+                      }),
+                        (p.wrapLogger = (
+                          e,
+                          t,
+                          {
+                            customAttributes: r = {},
+                            level: i = y.p_.INFO,
+                          } = {}
+                        ) => {
+                          (0, a.p)(
+                            f.xV,
+                            ["API/wrapLogger/called"],
+                            void 0,
+                            n.K.metrics,
+                            x
+                          ),
+                            T(x, e, t, { customAttributes: r, level: i });
+                        }),
+                        m.forEach((e) => {
+                          p[e] = N(A, e, !0, "api");
+                        }),
+                        (p.addPageAction = N(
+                          A,
+                          "addPageAction",
+                          !0,
+                          n.K.genericEvents
+                        )),
+                        (p.setPageViewName = function (t, r) {
+                          if ("string" == typeof t)
+                            return (
+                              "/" !== t.charAt(0) && (t = "/" + t),
+                              ((0, o.f)(e).customTransaction =
+                                (r || "http://custom.transaction") + t),
+                              N(A, "setPageViewName", !0)()
+                            );
+                        }),
+                        (p.setCustomAttribute = function (e, t, r = !1) {
+                          if ("string" == typeof e) {
+                            if (
+                              ["string", "number", "boolean"].includes(
+                                typeof t
+                              ) ||
+                              null === t
+                            )
+                              return O(e, t, "setCustomAttribute", r);
+                            (0, l.R)(40, typeof t);
+                          } else (0, l.R)(39, typeof e);
+                        }),
+                        (p.setUserId = function (e) {
+                          if ("string" == typeof e || null === e)
+                            return O("enduser.id", e, "setUserId", !0);
+                          (0, l.R)(41, typeof e);
+                        }),
+                        (p.setApplicationVersion = function (e) {
+                          if ("string" == typeof e || null === e)
+                            return O(
+                              "application.version",
+                              e,
+                              "setApplicationVersion",
+                              !1
+                            );
+                          (0, l.R)(42, typeof e);
+                        }),
+                        (p.start = () => {
+                          try {
+                            (0, a.p)(
+                              f.xV,
+                              ["API/start/called"],
+                              void 0,
+                              n.K.metrics,
+                              x
+                            ),
+                              x.emit("manual-start-all");
+                          } catch (e) {
+                            (0, l.R)(23, e);
+                          }
+                        }),
+                        (p[g.G4.RECORD] = function () {
+                          (0, a.p)(
+                            f.xV,
+                            ["API/recordReplay/called"],
+                            void 0,
+                            n.K.metrics,
+                            x
+                          ),
+                            (0, a.p)(
+                              g.G4.RECORD,
+                              [],
+                              void 0,
+                              n.K.sessionReplay,
+                              x
+                            );
+                        }),
+                        (p[g.G4.PAUSE] = function () {
+                          (0, a.p)(
+                            f.xV,
+                            ["API/pauseReplay/called"],
+                            void 0,
+                            n.K.metrics,
+                            x
+                          ),
+                            (0, a.p)(
+                              g.G4.PAUSE,
+                              [],
+                              void 0,
+                              n.K.sessionReplay,
+                              x
+                            );
+                        }),
+                        (p.interaction = function (e) {
+                          return new _().get("object" == typeof e ? e : {});
+                        });
+                      const I = (_.prototype = {
+                        createTracer: function (e, t) {
+                          var r = {},
+                            i = this,
+                            o = "function" == typeof t;
+                          return (
+                            (0, a.p)(
+                              f.xV,
+                              ["API/createTracer/called"],
+                              void 0,
+                              n.K.metrics,
+                              x
+                            ),
+                            h ||
+                              (0, a.p)(
+                                S + "tracer",
+                                [(0, v.t)(), e, r],
+                                i,
+                                n.K.spa,
+                                x
+                              ),
+                            function () {
+                              if (
+                                (w.emit(
+                                  (o ? "" : "no-") + "fn-start",
+                                  [(0, v.t)(), i, o],
+                                  r
+                                ),
+                                o)
+                              )
+                                try {
+                                  return t.apply(this, arguments);
+                                } catch (e) {
+                                  const t =
+                                    "string" == typeof e ? new Error(e) : e;
+                                  throw (
+                                    (w.emit("fn-err", [arguments, this, t], r),
+                                    t)
+                                  );
+                                } finally {
+                                  w.emit("fn-end", [(0, v.t)()], r);
+                                }
+                            }
+                          );
+                        },
+                      });
+                      function N(e, t, r, i) {
+                        return function () {
+                          return (
+                            (0, a.p)(
+                              f.xV,
+                              ["API/" + t + "/called"],
+                              void 0,
+                              n.K.metrics,
+                              x
+                            ),
+                            i &&
+                              (0, a.p)(
+                                e + t,
+                                [(0, v.t)(), ...arguments],
+                                r ? null : this,
+                                i,
+                                x
+                              ),
+                            r ? void 0 : this
+                          );
+                        };
+                      }
+                      function j() {
+                        r.e(891)
+                          .then(r.bind(r, 8778))
+                          .then(({ setAPI: t }) => {
+                            t(e), (0, c.Ze)(e, "api");
+                          })
+                          .catch((e) => {
+                            (0, l.R)(27, e), x.abort();
+                          });
+                      }
+                      return (
+                        [
+                          "actionText",
+                          "setName",
+                          "setAttribute",
+                          "save",
+                          "ignore",
+                          "onEnd",
+                          "getContext",
+                          "end",
+                          "get",
+                        ].forEach((e) => {
+                          I[e] = N(S, e, void 0, h ? n.K.softNav : n.K.spa);
+                        }),
+                        (p.setCurrentRouteName = h
+                          ? N(S, "routeName", void 0, n.K.softNav)
+                          : N(A, "routeName", !0, n.K.spa)),
+                        (p.noticeError = function (t, r) {
+                          "string" == typeof t && (t = new Error(t)),
+                            (0, a.p)(
+                              f.xV,
+                              ["API/noticeError/called"],
+                              void 0,
+                              n.K.metrics,
+                              x
+                            ),
+                            (0, a.p)(
+                              "err",
+                              [t, (0, v.t)(), !1, r, !!E[e]],
+                              void 0,
+                              n.K.jserrors,
+                              x
+                            );
+                        }),
+                        d.RI ? (0, u.GG)(() => j(), !0) : j(),
+                        p
+                      );
+                    })(e.agentIdentifier, x, e.runSoftNavOverSpa)),
+                  void 0 === e.exposed && (e.exposed = k),
+                  (N = !0);
+              }
+            },
+            8374: (e, t, r) => {
+              r.nc = (() => {
+                try {
+                  return document?.currentScript?.nonce;
+                } catch (e) {}
+                return "";
+              })();
+            },
+            860: (e, t, r) => {
+              "use strict";
+              r.d(t, { K: () => n, P: () => i });
+              const n = {
+                  ajax: "ajax",
+                  genericEvents: "generic_events",
+                  jserrors: "jserrors",
+                  logging: "logging",
+                  metrics: "metrics",
+                  pageAction: "page_action",
+                  pageViewEvent: "page_view_event",
+                  pageViewTiming: "page_view_timing",
+                  sessionReplay: "session_replay",
+                  sessionTrace: "session_trace",
+                  softNav: "soft_navigations",
+                  spa: "spa",
+                },
+                i = {
+                  [n.pageViewEvent]: 1,
+                  [n.pageViewTiming]: 2,
+                  [n.metrics]: 3,
+                  [n.jserrors]: 4,
+                  [n.spa]: 5,
+                  [n.ajax]: 6,
+                  [n.sessionTrace]: 7,
+                  [n.softNav]: 8,
+                  [n.sessionReplay]: 9,
+                  [n.logging]: 10,
+                  [n.genericEvents]: 11,
+                };
+            },
+          },
+          n = {};
+        function i(e) {
+          var t = n[e];
+          if (void 0 !== t) return t.exports;
+          var o = (n[e] = { exports: {} });
+          return r[e](o, o.exports, i), o.exports;
+        }
+        (i.m = r),
+          (i.d = (e, t) => {
+            for (var r in t)
+              i.o(t, r) &&
+                !i.o(e, r) &&
+                Object.defineProperty(e, r, { enumerable: !0, get: t[r] });
+          }),
+          (i.f = {}),
+          (i.e = (e) =>
+            Promise.all(
+              Object.keys(i.f).reduce((t, r) => (i.f[r](e, t), t), [])
+            )),
+          (i.u = (e) =>
+            ({
+              95: "nr-full-compressor",
+              222: "nr-full-recorder",
+              891: "nr-full",
+            }[e] + "-1.266.0.min.js")),
+          (i.o = (e, t) => Object.prototype.hasOwnProperty.call(e, t)),
+          (e = {}),
+          (t = "NRBA-1.266.0.PROD:"),
+          (i.l = (r, n, o, a) => {
+            if (e[r]) e[r].push(n);
+            else {
+              var s, c;
+              if (void 0 !== o)
+                for (
+                  var u = document.getElementsByTagName("script"), d = 0;
+                  d < u.length;
+                  d++
+                ) {
+                  var l = u[d];
+                  if (
+                    l.getAttribute("src") == r ||
+                    l.getAttribute("data-webpack") == t + o
+                  ) {
+                    s = l;
+                    break;
+                  }
+                }
+              if (!s) {
+                c = !0;
+                var f = {
+                  891: "sha512-hWuskdhJXL1FfmIe3uyPsYMW+B0i3aOdJ8C/Sf7EX6SGcKw4j7T3zdiD27XjI9QYqx4dGzRPMoIa7AwRNxrRFw==",
+                  222: "sha512-2vDRAtUZUlxKqhsDjr4aFEjpHL4UOKhctsvZavfTcYhYH9QdafUCBngCyf07KL6pdhMblFjK0tWs7DqGfI6h8Q==",
+                  95: "sha512-+F461TWOj+uT9i2R1F5Q/D/umzDXFMRmXg8fQUA53GMbEYia0dLiXchiyB8GjlR/WMU0GJip+U5hnjUnRs8LQg==",
+                };
+                ((s = document.createElement("script")).charset = "utf-8"),
+                  (s.timeout = 120),
+                  i.nc && s.setAttribute("nonce", i.nc),
+                  s.setAttribute("data-webpack", t + o),
+                  (s.src = r),
+                  0 !== s.src.indexOf(window.location.origin + "/") &&
+                    (s.crossOrigin = "anonymous"),
+                  f[a] && (s.integrity = f[a]);
+              }
+              e[r] = [n];
+              var h = (t, n) => {
+                  (s.onerror = s.onload = null), clearTimeout(g);
+                  var i = e[r];
+                  if (
+                    (delete e[r],
+                    s.parentNode && s.parentNode.removeChild(s),
+                    i && i.forEach((e) => e(n)),
+                    t)
+                  )
+                    return t(n);
+                },
+                g = setTimeout(
+                  h.bind(null, void 0, { type: "timeout", target: s }),
+                  12e4
+                );
+              (s.onerror = h.bind(null, s.onerror)),
+                (s.onload = h.bind(null, s.onload)),
+                c && document.head.appendChild(s);
+            }
+          }),
+          (i.r = (e) => {
+            "undefined" != typeof Symbol &&
+              Symbol.toStringTag &&
+              Object.defineProperty(e, Symbol.toStringTag, { value: "Module" }),
+              Object.defineProperty(e, "__esModule", { value: !0 });
+          }),
+          (i.p = "https://js-agent.newrelic.com/"),
+          (() => {
+            var e = { 959: 0, 85: 0 };
+            i.f.j = (t, r) => {
+              var n = i.o(e, t) ? e[t] : void 0;
+              if (0 !== n)
+                if (n) r.push(n[2]);
+                else {
+                  var o = new Promise((r, i) => (n = e[t] = [r, i]));
+                  r.push((n[2] = o));
+                  var a = i.p + i.u(t),
+                    s = new Error();
+                  i.l(
+                    a,
+                    (r) => {
+                      if (
+                        i.o(e, t) &&
+                        (0 !== (n = e[t]) && (e[t] = void 0), n)
+                      ) {
+                        var o = r && ("load" === r.type ? "missing" : r.type),
+                          a = r && r.target && r.target.src;
+                        (s.message =
+                          "Loading chunk " +
+                          t +
+                          " failed.\n(" +
+                          o +
+                          ": " +
+                          a +
+                          ")"),
+                          (s.name = "ChunkLoadError"),
+                          (s.type = o),
+                          (s.request = a),
+                          n[1](s);
+                      }
+                    },
+                    "chunk-" + t,
+                    t
+                  );
+                }
+            };
+            var t = (t, r) => {
+                var n,
+                  o,
+                  [a, s, c] = r,
+                  u = 0;
+                if (a.some((t) => 0 !== e[t])) {
+                  for (n in s) i.o(s, n) && (i.m[n] = s[n]);
+                  if (c) c(i);
+                }
+                for (t && t(r); u < a.length; u++)
+                  (o = a[u]), i.o(e, o) && e[o] && e[o][0](), (e[o] = 0);
+              },
+              r = (self["webpackChunk:NRBA-1.266.0.PROD"] =
+                self["webpackChunk:NRBA-1.266.0.PROD"] || []);
+            r.forEach(t.bind(null, 0)), (r.push = t.bind(null, r.push.bind(r)));
+          })(),
+          (() => {
+            "use strict";
+            i(8374);
+            var e = i(944),
+              t = i(6344),
+              r = i(9566);
+            class n {
+              agentIdentifier;
+              constructor(e = (0, r.LA)(16)) {
+                this.agentIdentifier = e;
+              }
+              #e(t, ...r) {
+                if ("function" == typeof this.api?.[t])
+                  return this.api[t](...r);
+                (0, e.R)(35, t);
+              }
+              addPageAction(e, t) {
+                return this.#e("addPageAction", e, t);
+              }
+              setPageViewName(e, t) {
+                return this.#e("setPageViewName", e, t);
+              }
+              setCustomAttribute(e, t, r) {
+                return this.#e("setCustomAttribute", e, t, r);
+              }
+              noticeError(e, t) {
+                return this.#e("noticeError", e, t);
+              }
+              setUserId(e) {
+                return this.#e("setUserId", e);
+              }
+              setApplicationVersion(e) {
+                return this.#e("setApplicationVersion", e);
+              }
+              setErrorHandler(e) {
+                return this.#e("setErrorHandler", e);
+              }
+              finished(e) {
+                return this.#e("finished", e);
+              }
+              addRelease(e, t) {
+                return this.#e("addRelease", e, t);
+              }
+              start(e) {
+                return this.#e("start", e);
+              }
+              recordReplay() {
+                return this.#e(t.G4.RECORD);
+              }
+              pauseReplay() {
+                return this.#e(t.G4.PAUSE);
+              }
+              addToTrace(e) {
+                return this.#e("addToTrace", e);
+              }
+              setCurrentRouteName(e) {
+                return this.#e("setCurrentRouteName", e);
+              }
+              interaction() {
+                return this.#e("interaction");
+              }
+              log(e, t) {
+                return this.#e("log", e, t);
+              }
+              wrapLogger(e, t, r) {
+                return this.#e("wrapLogger", e, t, r);
+              }
+            }
+            var o = i(860),
+              a = i(9417);
+            const s = Object.values(o.K);
+            function c(e) {
+              const t = {};
+              return (
+                s.forEach((r) => {
+                  t[r] = (function (e, t) {
+                    return !0 === (0, a.gD)(t, "".concat(e, ".enabled"));
+                  })(r, e);
+                }),
+                t
+              );
+            }
+            var u = i(425);
+            var d = i(1687),
+              l = i(4234),
+              f = i(5289),
+              h = i(6154),
+              g = i(5270),
+              p = i(7767),
+              m = i(6389);
+            class v extends l.W {
+              constructor(e, t, r, n = !0) {
+                super(e, t, r),
+                  (this.auto = n),
+                  (this.abortHandler = void 0),
+                  (this.featAggregate = void 0),
+                  (this.onAggregateImported = void 0),
+                  !1 ===
+                    (0, a.gD)(
+                      this.agentIdentifier,
+                      "".concat(this.featureName, ".autoStart")
+                    ) && (this.auto = !1),
+                  this.auto
+                    ? (0, d.Ak)(e, r)
+                    : this.ee.on(
+                        "manual-start-all",
+                        (0, m.J)(() => {
+                          (0, d.Ak)(this.agentIdentifier, this.featureName),
+                            (this.auto = !0),
+                            this.importAggregator();
+                        })
+                      );
+              }
+              importAggregator(t = {}) {
+                if (this.featAggregate || !this.auto) return;
+                let r;
+                this.onAggregateImported = new Promise((e) => {
+                  r = e;
+                });
+                const n = async () => {
+                  let n;
+                  try {
+                    if ((0, p.V)(this.agentIdentifier)) {
+                      const { setupAgentSession: e } = await i
+                        .e(891)
+                        .then(i.bind(i, 6526));
+                      n = e(this.agentIdentifier);
+                    }
+                  } catch (t) {
+                    (0, e.R)(20, t),
+                      this.ee.emit("internal-error", [t]),
+                      this.featureName === o.K.sessionReplay &&
+                        this.abortHandler?.();
+                  }
+                  try {
+                    if (!this.#t(this.featureName, n))
+                      return (
+                        (0, d.Ze)(this.agentIdentifier, this.featureName),
+                        void r(!1)
+                      );
+                    const { lazyFeatureLoader: e } = await i
+                        .e(891)
+                        .then(i.bind(i, 6103)),
+                      { Aggregate: o } = await e(this.featureName, "aggregate");
+                    (this.featAggregate = new o(
+                      this.agentIdentifier,
+                      this.aggregator,
+                      t
+                    )),
+                      r(!0);
+                  } catch (t) {
+                    (0, e.R)(34, t),
+                      this.abortHandler?.(),
+                      (0, d.Ze)(this.agentIdentifier, this.featureName, !0),
+                      r(!1),
+                      this.ee && this.ee.abort();
+                  }
+                };
+                h.RI ? (0, f.GG)(() => n(), !0) : n();
+              }
+              #t(e, t) {
+                switch (e) {
+                  case o.K.sessionReplay:
+                    return (0, g.SR)(this.agentIdentifier) && !!t;
+                  case o.K.sessionTrace:
+                    return !!t;
+                  default:
+                    return !0;
+                }
+              }
+            }
+            var b = i(6630);
+            class y extends v {
+              static featureName = b.T;
+              constructor(e, t, r = !0) {
+                super(e, t, b.T, r), this.importAggregator();
+              }
+            }
+            var R = i(4777);
+            class x extends R.J {
+              constructor(e) {
+                super(e), (this.aggregatedData = {});
+              }
+              store(e, t, r, n, i) {
+                var o = this.getBucket(e, t, r, i);
+                return (
+                  (o.metrics = (function (e, t) {
+                    t || (t = { count: 0 });
+                    return (
+                      (t.count += 1),
+                      Object.entries(e || {}).forEach(([e, r]) => {
+                        t[e] = w(r, t[e]);
+                      }),
+                      t
+                    );
+                  })(n, o.metrics)),
+                  o
+                );
+              }
+              merge(e, t, r, n, i) {
+                var o = this.getBucket(e, t, n, i);
+                if (o.metrics) {
+                  var a = o.metrics;
+                  (a.count += r.count),
+                    Object.keys(r || {}).forEach((e) => {
+                      if ("count" !== e) {
+                        var t = a[e],
+                          n = r[e];
+                        n && !n.c
+                          ? (a[e] = w(n.t, t))
+                          : (a[e] = (function (e, t) {
+                              if (!t) return e;
+                              t.c || (t = T(t.t));
+                              return (
+                                (t.min = Math.min(e.min, t.min)),
+                                (t.max = Math.max(e.max, t.max)),
+                                (t.t += e.t),
+                                (t.sos += e.sos),
+                                (t.c += e.c),
+                                t
+                              );
+                            })(n, a[e]));
+                      }
+                    });
+                } else o.metrics = r;
+              }
+              storeMetric(e, t, r, n) {
+                var i = this.getBucket(e, t, r);
+                return (i.stats = w(n, i.stats)), i;
+              }
+              getBucket(e, t, r, n) {
+                this.aggregatedData[e] || (this.aggregatedData[e] = {});
+                var i = this.aggregatedData[e][t];
+                return (
+                  i ||
+                    ((i = this.aggregatedData[e][t] = { params: r || {} }),
+                    n && (i.custom = n)),
+                  i
+                );
+              }
+              get(e, t) {
+                return t
+                  ? this.aggregatedData[e] && this.aggregatedData[e][t]
+                  : this.aggregatedData[e];
+              }
+              take(e) {
+                for (var t = {}, r = "", n = !1, i = 0; i < e.length; i++)
+                  (t[(r = e[i])] = Object.values(this.aggregatedData[r] || {})),
+                    t[r].length && (n = !0),
+                    delete this.aggregatedData[r];
+                return n ? t : null;
+              }
+            }
+            function w(e, t) {
+              return null == e
+                ? (function (e) {
+                    e ? e.c++ : (e = { c: 1 });
+                    return e;
+                  })(t)
+                : t
+                ? (t.c || (t = T(t.t)),
+                  (t.c += 1),
+                  (t.t += e),
+                  (t.sos += e * e),
+                  e > t.max && (t.max = e),
+                  e < t.min && (t.min = e),
+                  t)
+                : { t: e };
+            }
+            function T(e) {
+              return { t: e, min: e, max: e, sos: e * e, c: 1 };
+            }
+            var A = i(384);
+            var E = i(9908),
+              S = i(2843),
+              O = i(3878),
+              _ = i(782),
+              I = i(1863);
+            class N extends v {
+              static featureName = _.T;
+              constructor(e, t, r = !0) {
+                super(e, t, _.T, r),
+                  h.RI &&
+                    ((0, S.u)(
+                      () =>
+                        (0, E.p)(
+                          "docHidden",
+                          [(0, I.t)()],
+                          void 0,
+                          _.T,
+                          this.ee
+                        ),
+                      !0
+                    ),
+                    (0, O.sp)("pagehide", () =>
+                      (0, E.p)(
+                        "winPagehide",
+                        [(0, I.t)()],
+                        void 0,
+                        _.T,
+                        this.ee
+                      )
+                    ),
+                    this.importAggregator());
+              }
+            }
+            var j = i(3969);
+            class P extends v {
+              static featureName = j.TZ;
+              constructor(e, t, r = !0) {
+                super(e, t, j.TZ, r), this.importAggregator();
+              }
+            }
+            var C = i(6774),
+              k = i(3304);
+            class D {
+              constructor(e, t, r, n, i) {
+                (this.name = "UncaughtError"),
+                  (this.message = "string" == typeof e ? e : (0, k.A)(e)),
+                  (this.sourceURL = t),
+                  (this.line = r),
+                  (this.column = n),
+                  (this.__newrelic = i);
+              }
+            }
+            function H(e) {
+              return M(e)
+                ? e
+                : new D(
+                    void 0 !== e?.message ? e.message : e,
+                    e?.filename || e?.sourceURL,
+                    e?.lineno || e?.line,
+                    e?.colno || e?.col,
+                    e?.__newrelic
+                  );
+            }
+            function L(e) {
+              let t = "Unhandled Promise Rejection";
+              if (M(e?.reason))
+                try {
+                  return (
+                    (e.reason.message = t + ": " + e.reason.message),
+                    H(e.reason)
+                  );
+                } catch (t) {
+                  return H(e.reason);
+                }
+              if (void 0 === e.reason) return H(t);
+              const r = H(e.reason);
+              return (r.message = t + ": " + r?.message), r;
+            }
+            function K(e) {
+              if (
+                e.error instanceof SyntaxError &&
+                !/:\d+$/.test(e.error.stack?.trim())
+              ) {
+                const t = new D(
+                  e.message,
+                  e.filename,
+                  e.lineno,
+                  e.colno,
+                  e.error.__newrelic
+                );
+                return (t.name = SyntaxError.name), t;
+              }
+              return M(e.error) ? e.error : H(e);
+            }
+            function M(e) {
+              return e instanceof Error && !!e.stack;
+            }
+            class U extends v {
+              static featureName = C.T;
+              #r = !1;
+              constructor(e, r, n = !0) {
+                super(e, r, C.T, n);
+                try {
+                  this.removeOnAbort = new AbortController();
+                } catch (e) {}
+                this.ee.on("internal-error", (e) => {
+                  this.abortHandler &&
+                    (0, E.p)(
+                      "ierr",
+                      [H(e), (0, I.t)(), !0, {}, this.#r],
+                      void 0,
+                      this.featureName,
+                      this.ee
+                    );
+                }),
+                  this.ee.on(t.G4.REPLAY_RUNNING, (e) => {
+                    this.#r = e;
+                  }),
+                  h.gm.addEventListener(
+                    "unhandledrejection",
+                    (e) => {
+                      this.abortHandler &&
+                        (0, E.p)(
+                          "err",
+                          [
+                            L(e),
+                            (0, I.t)(),
+                            !1,
+                            { unhandledPromiseRejection: 1 },
+                            this.#r,
+                          ],
+                          void 0,
+                          this.featureName,
+                          this.ee
+                        );
+                    },
+                    (0, O.jT)(!1, this.removeOnAbort?.signal)
+                  ),
+                  h.gm.addEventListener(
+                    "error",
+                    (e) => {
+                      this.abortHandler &&
+                        (0, E.p)(
+                          "err",
+                          [K(e), (0, I.t)(), !1, {}, this.#r],
+                          void 0,
+                          this.featureName,
+                          this.ee
+                        );
+                    },
+                    (0, O.jT)(!1, this.removeOnAbort?.signal)
+                  ),
+                  (this.abortHandler = this.#n),
+                  this.importAggregator();
+              }
+              #n() {
+                this.removeOnAbort?.abort(), (this.abortHandler = void 0);
+              }
+            }
+            var V = i(5603),
+              B = i(8990);
+            let G = 1;
+            const F = "nr@id";
+            function W(e) {
+              const t = typeof e;
+              return !e || ("object" !== t && "function" !== t)
+                ? -1
+                : e === h.gm
+                ? 0
+                : (0, B.I)(e, F, function () {
+                    return G++;
+                  });
+            }
+            function z(e) {
+              if ("string" == typeof e && e.length) return e.length;
+              if ("object" == typeof e) {
+                if (
+                  "undefined" != typeof ArrayBuffer &&
+                  e instanceof ArrayBuffer &&
+                  e.byteLength
+                )
+                  return e.byteLength;
+                if ("undefined" != typeof Blob && e instanceof Blob && e.size)
+                  return e.size;
+                if (!("undefined" != typeof FormData && e instanceof FormData))
+                  try {
+                    return (0, k.A)(e).length;
+                  } catch (e) {
+                    return;
+                  }
+              }
+            }
+            var q = i(8139),
+              Z = i(7836),
+              Y = i(3434);
+            const X = {},
+              J = ["open", "send"];
+            function Q(t) {
+              var r = t || Z.ee;
+              const n = (function (e) {
+                return (e || Z.ee).get("xhr");
+              })(r);
+              if (X[n.debugId]++) return n;
+              (X[n.debugId] = 1), (0, q.u)(r);
+              var i = (0, Y.YM)(n),
+                o = h.gm.XMLHttpRequest,
+                a = h.gm.MutationObserver,
+                s = h.gm.Promise,
+                c = h.gm.setInterval,
+                u = "readystatechange",
+                d = [
+                  "onload",
+                  "onerror",
+                  "onabort",
+                  "onloadstart",
+                  "onloadend",
+                  "onprogress",
+                  "ontimeout",
+                ],
+                l = [],
+                f = (h.gm.XMLHttpRequest = function (t) {
+                  const r = new o(t),
+                    a = n.context(r);
+                  try {
+                    n.emit("new-xhr", [r], a),
+                      r.addEventListener(
+                        u,
+                        ((s = a),
+                        function () {
+                          var e = this;
+                          e.readyState > 3 &&
+                            !s.resolved &&
+                            ((s.resolved = !0), n.emit("xhr-resolved", [], e)),
+                            i.inPlace(e, d, "fn-", y);
+                        }),
+                        (0, O.jT)(!1)
+                      );
+                  } catch (t) {
+                    (0, e.R)(15, t);
+                    try {
+                      n.emit("internal-error", [t]);
+                    } catch (e) {}
+                  }
+                  var s;
+                  return r;
+                });
+              function g(e, t) {
+                i.inPlace(t, ["onreadystatechange"], "fn-", y);
+              }
+              if (
+                ((function (e, t) {
+                  for (var r in e) t[r] = e[r];
+                })(o, f),
+                (f.prototype = o.prototype),
+                i.inPlace(f.prototype, J, "-xhr-", y),
+                n.on("send-xhr-start", function (e, t) {
+                  g(e, t),
+                    (function (e) {
+                      l.push(e),
+                        a &&
+                          (p ? p.then(b) : c ? c(b) : ((m = -m), (v.data = m)));
+                    })(t);
+                }),
+                n.on("open-xhr-start", g),
+                a)
+              ) {
+                var p = s && s.resolve();
+                if (!c && !s) {
+                  var m = 1,
+                    v = document.createTextNode(m);
+                  new a(b).observe(v, { characterData: !0 });
+                }
+              } else
+                r.on("fn-end", function (e) {
+                  (e[0] && e[0].type === u) || b();
+                });
+              function b() {
+                for (var e = 0; e < l.length; e++) g(0, l[e]);
+                l.length && (l = []);
+              }
+              function y(e, t) {
+                return t;
+              }
+              return n;
+            }
+            var ee = "fetch-",
+              te = ee + "body-",
+              re = ["arrayBuffer", "blob", "json", "text", "formData"],
+              ne = h.gm.Request,
+              ie = h.gm.Response,
+              oe = "prototype";
+            const ae = {};
+            function se(e) {
+              const t = (function (e) {
+                return (e || Z.ee).get("fetch");
+              })(e);
+              if (!(ne && ie && h.gm.fetch)) return t;
+              if (ae[t.debugId]++) return t;
+              function r(e, r, n) {
+                var i = e[r];
+                "function" == typeof i &&
+                  (e[r] = function () {
+                    var e,
+                      r = [...arguments],
+                      o = {};
+                    t.emit(n + "before-start", [r], o),
+                      o[Z.P] && o[Z.P].dt && (e = o[Z.P].dt);
+                    var a = i.apply(this, r);
+                    return (
+                      t.emit(n + "start", [r, e], a),
+                      a.then(
+                        function (e) {
+                          return t.emit(n + "end", [null, e], a), e;
+                        },
+                        function (e) {
+                          throw (t.emit(n + "end", [e], a), e);
+                        }
+                      )
+                    );
+                  });
+              }
+              return (
+                (ae[t.debugId] = 1),
+                re.forEach((e) => {
+                  r(ne[oe], e, te), r(ie[oe], e, te);
+                }),
+                r(h.gm, "fetch", ee),
+                t.on(ee + "end", function (e, r) {
+                  var n = this;
+                  if (r) {
+                    var i = r.headers.get("content-length");
+                    null !== i && (n.rxSize = i),
+                      t.emit(ee + "done", [null, r], n);
+                  } else t.emit(ee + "done", [e], n);
+                }),
+                t
+              );
+            }
+            var ce = i(7485);
+            class ue {
+              constructor(e) {
+                this.agentIdentifier = e;
+              }
+              generateTracePayload(e) {
+                if (!this.shouldGenerateTrace(e)) return null;
+                var t = (0, V.o)(this.agentIdentifier);
+                if (!t) return null;
+                var n = (t.accountID || "").toString() || null,
+                  i = (t.agentID || "").toString() || null,
+                  o = (t.trustKey || "").toString() || null;
+                if (!n || !i) return null;
+                var a = (0, r.ZF)(),
+                  s = (0, r.el)(),
+                  c = Date.now(),
+                  u = { spanId: a, traceId: s, timestamp: c };
+                return (
+                  (e.sameOrigin ||
+                    (this.isAllowedOrigin(e) &&
+                      this.useTraceContextHeadersForCors())) &&
+                    ((u.traceContextParentHeader =
+                      this.generateTraceContextParentHeader(a, s)),
+                    (u.traceContextStateHeader =
+                      this.generateTraceContextStateHeader(a, c, n, i, o))),
+                  ((e.sameOrigin && !this.excludeNewrelicHeader()) ||
+                    (!e.sameOrigin &&
+                      this.isAllowedOrigin(e) &&
+                      this.useNewrelicHeaderForCors())) &&
+                    (u.newrelicHeader = this.generateTraceHeader(
+                      a,
+                      s,
+                      c,
+                      n,
+                      i,
+                      o
+                    )),
+                  u
+                );
+              }
+              generateTraceContextParentHeader(e, t) {
+                return "00-" + t + "-" + e + "-01";
+              }
+              generateTraceContextStateHeader(e, t, r, n, i) {
+                return i + "@nr=0-1-" + r + "-" + n + "-" + e + "----" + t;
+              }
+              generateTraceHeader(e, t, r, n, i, o) {
+                if (!("function" == typeof h.gm?.btoa)) return null;
+                var a = {
+                  v: [0, 1],
+                  d: { ty: "Browser", ac: n, ap: i, id: e, tr: t, ti: r },
+                };
+                return o && n !== o && (a.d.tk = o), btoa((0, k.A)(a));
+              }
+              shouldGenerateTrace(e) {
+                return this.isDtEnabled() && this.isAllowedOrigin(e);
+              }
+              isAllowedOrigin(e) {
+                var t = !1,
+                  r = {};
+                if (
+                  ((0, a.gD)(this.agentIdentifier, "distributed_tracing") &&
+                    (r = (0, a.D0)(this.agentIdentifier).distributed_tracing),
+                  e.sameOrigin)
+                )
+                  t = !0;
+                else if (r.allowed_origins instanceof Array)
+                  for (var n = 0; n < r.allowed_origins.length; n++) {
+                    var i = (0, ce.D)(r.allowed_origins[n]);
+                    if (
+                      e.hostname === i.hostname &&
+                      e.protocol === i.protocol &&
+                      e.port === i.port
+                    ) {
+                      t = !0;
+                      break;
+                    }
+                  }
+                return t;
+              }
+              isDtEnabled() {
+                var e = (0, a.gD)(this.agentIdentifier, "distributed_tracing");
+                return !!e && !!e.enabled;
+              }
+              excludeNewrelicHeader() {
+                var e = (0, a.gD)(this.agentIdentifier, "distributed_tracing");
+                return !!e && !!e.exclude_newrelic_header;
+              }
+              useNewrelicHeaderForCors() {
+                var e = (0, a.gD)(this.agentIdentifier, "distributed_tracing");
+                return !!e && !1 !== e.cors_use_newrelic_header;
+              }
+              useTraceContextHeadersForCors() {
+                var e = (0, a.gD)(this.agentIdentifier, "distributed_tracing");
+                return !!e && !!e.cors_use_tracecontext_headers;
+              }
+            }
+            var de = i(9300),
+              le = i(7295),
+              fe = ["load", "error", "abort", "timeout"],
+              he = fe.length,
+              ge = (0, A.dV)().o.REQ,
+              pe = (0, A.dV)().o.XHR;
+            class me extends v {
+              static featureName = de.T;
+              constructor(e, t, r = !0) {
+                super(e, t, de.T, r),
+                  (this.dt = new ue(e)),
+                  (this.handler = (e, t, r, n) =>
+                    (0, E.p)(e, t, r, n, this.ee));
+                try {
+                  const e = {
+                    xmlhttprequest: "xhr",
+                    fetch: "fetch",
+                    beacon: "beacon",
+                  };
+                  h.gm?.performance
+                    ?.getEntriesByType("resource")
+                    .forEach((t) => {
+                      if (t.initiatorType in e && 0 !== t.responseStatus) {
+                        const r = { status: t.responseStatus },
+                          n = {
+                            rxSize: t.transferSize,
+                            duration: Math.floor(t.duration),
+                            cbTime: 0,
+                          };
+                        ve(r, t.name),
+                          this.handler(
+                            "xhr",
+                            [
+                              r,
+                              n,
+                              t.startTime,
+                              t.responseEnd,
+                              e[t.initiatorType],
+                            ],
+                            void 0,
+                            o.K.ajax
+                          );
+                      }
+                    });
+                } catch (e) {}
+                se(this.ee),
+                  Q(this.ee),
+                  (function (e, t, r, n) {
+                    function i(e) {
+                      var t = this;
+                      (t.totalCbs = 0),
+                        (t.called = 0),
+                        (t.cbTime = 0),
+                        (t.end = x),
+                        (t.ended = !1),
+                        (t.xhrGuids = {}),
+                        (t.lastSize = null),
+                        (t.loadCaptureCalled = !1),
+                        (t.params = this.params || {}),
+                        (t.metrics = this.metrics || {}),
+                        e.addEventListener(
+                          "load",
+                          function (r) {
+                            w(t, e);
+                          },
+                          (0, O.jT)(!1)
+                        ),
+                        h.lR ||
+                          e.addEventListener(
+                            "progress",
+                            function (e) {
+                              t.lastSize = e.loaded;
+                            },
+                            (0, O.jT)(!1)
+                          );
+                    }
+                    function a(e) {
+                      (this.params = { method: e[0] }),
+                        ve(this, e[1]),
+                        (this.metrics = {});
+                    }
+                    function s(t, r) {
+                      var i = (0, V.o)(e);
+                      i.xpid &&
+                        this.sameOrigin &&
+                        r.setRequestHeader("X-NewRelic-ID", i.xpid);
+                      var o = n.generateTracePayload(this.parsedOrigin);
+                      if (o) {
+                        var a = !1;
+                        o.newrelicHeader &&
+                          (r.setRequestHeader("newrelic", o.newrelicHeader),
+                          (a = !0)),
+                          o.traceContextParentHeader &&
+                            (r.setRequestHeader(
+                              "traceparent",
+                              o.traceContextParentHeader
+                            ),
+                            o.traceContextStateHeader &&
+                              r.setRequestHeader(
+                                "tracestate",
+                                o.traceContextStateHeader
+                              ),
+                            (a = !0)),
+                          a && (this.dt = o);
+                      }
+                    }
+                    function c(e, r) {
+                      var n = this.metrics,
+                        i = e[0],
+                        o = this;
+                      if (n && i) {
+                        var a = z(i);
+                        a && (n.txSize = a);
+                      }
+                      (this.startTime = (0, I.t)()),
+                        (this.body = i),
+                        (this.listener = function (e) {
+                          try {
+                            "abort" !== e.type ||
+                              o.loadCaptureCalled ||
+                              (o.params.aborted = !0),
+                              ("load" !== e.type ||
+                                (o.called === o.totalCbs &&
+                                  (o.onloadCalled ||
+                                    "function" != typeof r.onload) &&
+                                  "function" == typeof o.end)) &&
+                                o.end(r);
+                          } catch (e) {
+                            try {
+                              t.emit("internal-error", [e]);
+                            } catch (e) {}
+                          }
+                        });
+                      for (var s = 0; s < he; s++)
+                        r.addEventListener(fe[s], this.listener, (0, O.jT)(!1));
+                    }
+                    function u(e, t, r) {
+                      (this.cbTime += e),
+                        t ? (this.onloadCalled = !0) : (this.called += 1),
+                        this.called !== this.totalCbs ||
+                          (!this.onloadCalled &&
+                            "function" == typeof r.onload) ||
+                          "function" != typeof this.end ||
+                          this.end(r);
+                    }
+                    function d(e, t) {
+                      var r = "" + W(e) + !!t;
+                      this.xhrGuids &&
+                        !this.xhrGuids[r] &&
+                        ((this.xhrGuids[r] = !0), (this.totalCbs += 1));
+                    }
+                    function l(e, t) {
+                      var r = "" + W(e) + !!t;
+                      this.xhrGuids &&
+                        this.xhrGuids[r] &&
+                        (delete this.xhrGuids[r], (this.totalCbs -= 1));
+                    }
+                    function f() {
+                      this.endTime = (0, I.t)();
+                    }
+                    function g(e, r) {
+                      r instanceof pe &&
+                        "load" === e[0] &&
+                        t.emit("xhr-load-added", [e[1], e[2]], r);
+                    }
+                    function p(e, r) {
+                      r instanceof pe &&
+                        "load" === e[0] &&
+                        t.emit("xhr-load-removed", [e[1], e[2]], r);
+                    }
+                    function m(e, t, r) {
+                      t instanceof pe &&
+                        ("onload" === r && (this.onload = !0),
+                        ("load" === (e[0] && e[0].type) || this.onload) &&
+                          (this.xhrCbStart = (0, I.t)()));
+                    }
+                    function v(e, r) {
+                      this.xhrCbStart &&
+                        t.emit(
+                          "xhr-cb-time",
+                          [(0, I.t)() - this.xhrCbStart, this.onload, r],
+                          r
+                        );
+                    }
+                    function b(e) {
+                      var t,
+                        r = e[1] || {};
+                      if (
+                        ("string" == typeof e[0]
+                          ? 0 === (t = e[0]).length &&
+                            h.RI &&
+                            (t = "" + h.gm.location.href)
+                          : e[0] && e[0].url
+                          ? (t = e[0].url)
+                          : h.gm?.URL && e[0] && e[0] instanceof URL
+                          ? (t = e[0].href)
+                          : "function" == typeof e[0].toString &&
+                            (t = e[0].toString()),
+                        "string" == typeof t && 0 !== t.length)
+                      ) {
+                        t &&
+                          ((this.parsedOrigin = (0, ce.D)(t)),
+                          (this.sameOrigin = this.parsedOrigin.sameOrigin));
+                        var i = n.generateTracePayload(this.parsedOrigin);
+                        if (
+                          i &&
+                          (i.newrelicHeader || i.traceContextParentHeader)
+                        )
+                          if (e[0] && e[0].headers)
+                            s(e[0].headers, i) && (this.dt = i);
+                          else {
+                            var o = {};
+                            for (var a in r) o[a] = r[a];
+                            (o.headers = new Headers(r.headers || {})),
+                              s(o.headers, i) && (this.dt = i),
+                              e.length > 1 ? (e[1] = o) : e.push(o);
+                          }
+                      }
+                      function s(e, t) {
+                        var r = !1;
+                        return (
+                          t.newrelicHeader &&
+                            (e.set("newrelic", t.newrelicHeader), (r = !0)),
+                          t.traceContextParentHeader &&
+                            (e.set("traceparent", t.traceContextParentHeader),
+                            t.traceContextStateHeader &&
+                              e.set("tracestate", t.traceContextStateHeader),
+                            (r = !0)),
+                          r
+                        );
+                      }
+                    }
+                    function y(e, t) {
+                      (this.params = {}),
+                        (this.metrics = {}),
+                        (this.startTime = (0, I.t)()),
+                        (this.dt = t),
+                        e.length >= 1 && (this.target = e[0]),
+                        e.length >= 2 && (this.opts = e[1]);
+                      var r,
+                        n = this.opts || {},
+                        i = this.target;
+                      "string" == typeof i
+                        ? (r = i)
+                        : "object" == typeof i && i instanceof ge
+                        ? (r = i.url)
+                        : h.gm?.URL &&
+                          "object" == typeof i &&
+                          i instanceof URL &&
+                          (r = i.href),
+                        ve(this, r);
+                      var o = (
+                        "" +
+                        ((i && i instanceof ge && i.method) ||
+                          n.method ||
+                          "GET")
+                      ).toUpperCase();
+                      (this.params.method = o),
+                        (this.body = n.body),
+                        (this.txSize = z(n.body) || 0);
+                    }
+                    function R(e, t) {
+                      if (
+                        ((this.endTime = (0, I.t)()),
+                        this.params || (this.params = {}),
+                        (0, le.iW)(this.params))
+                      )
+                        return;
+                      let n;
+                      (this.params.status = t ? t.status : 0),
+                        "string" == typeof this.rxSize &&
+                          this.rxSize.length > 0 &&
+                          (n = +this.rxSize);
+                      const i = {
+                        txSize: this.txSize,
+                        rxSize: n,
+                        duration: (0, I.t)() - this.startTime,
+                      };
+                      r(
+                        "xhr",
+                        [this.params, i, this.startTime, this.endTime, "fetch"],
+                        this,
+                        o.K.ajax
+                      );
+                    }
+                    function x(e) {
+                      const t = this.params,
+                        n = this.metrics;
+                      if (!this.ended) {
+                        this.ended = !0;
+                        for (let t = 0; t < he; t++)
+                          e.removeEventListener(fe[t], this.listener, !1);
+                        t.aborted ||
+                          (0, le.iW)(t) ||
+                          ((n.duration = (0, I.t)() - this.startTime),
+                          this.loadCazptureCalled || 4 !== e.readyState
+                            ? null == t.status && (t.status = 0)
+                            : w(this, e),
+                          (n.cbTime = this.cbTime),
+                          r(
+                            "xhr",
+                            [t, n, this.startTime, this.endTime, "xhr"],
+                            this,
+                            o.K.ajax
+                          ));
+                      }
+                    }
+                    function w(e, r) {
+                      e.params.status = r.status;
+                      var n = (function (e, t) {
+                        var r = e.responseType;
+                        return "json" === r && null !== t
+                          ? t
+                          : "arraybuffer" === r || "blob" === r || "json" === r
+                          ? z(e.response)
+                          : "text" === r || "" === r || void 0 === r
+                          ? z(e.responseText)
+                          : void 0;
+                      })(r, e.lastSize);
+                      if ((n && (e.metrics.rxSize = n), e.sameOrigin)) {
+                        var i = r.getResponseHeader("X-NewRelic-App-Data");
+                        i &&
+                          ((0, E.p)(
+                            j.rs,
+                            ["Ajax/CrossApplicationTracing/Header/Seen"],
+                            void 0,
+                            o.K.metrics,
+                            t
+                          ),
+                          (e.params.cat = i.split(", ").pop()));
+                      }
+                      e.loadCaptureCalled = !0;
+                    }
+                    t.on("new-xhr", i),
+                      t.on("open-xhr-start", a),
+                      t.on("open-xhr-end", s),
+                      t.on("send-xhr-start", c),
+                      t.on("xhr-cb-time", u),
+                      t.on("xhr-load-added", d),
+                      t.on("xhr-load-removed", l),
+                      t.on("xhr-resolved", f),
+                      t.on("addEventListener-end", g),
+                      t.on("removeEventListener-end", p),
+                      t.on("fn-end", v),
+                      t.on("fetch-before-start", b),
+                      t.on("fetch-start", y),
+                      t.on("fn-start", m),
+                      t.on("fetch-done", R);
+                  })(e, this.ee, this.handler, this.dt),
+                  this.importAggregator();
+              }
+            }
+            function ve(e, t) {
+              var r = (0, ce.D)(t),
+                n = e.params || e;
+              (n.hostname = r.hostname),
+                (n.port = r.port),
+                (n.protocol = r.protocol),
+                (n.host = r.hostname + ":" + r.port),
+                (n.pathname = r.pathname),
+                (e.parsedOrigin = r),
+                (e.sameOrigin = r.sameOrigin);
+            }
+            const be = {},
+              ye = ["pushState", "replaceState"];
+            function Re(e) {
+              const t = (function (e) {
+                return (e || Z.ee).get("history");
+              })(e);
+              return (
+                !h.RI ||
+                  be[t.debugId]++ ||
+                  ((be[t.debugId] = 1),
+                  (0, Y.YM)(t).inPlace(window.history, ye, "-")),
+                t
+              );
+            }
+            var xe = i(3738);
+            const {
+              He: we,
+              bD: Te,
+              d3: Ae,
+              Kp: Ee,
+              TZ: Se,
+              Lc: Oe,
+              uP: _e,
+              Rz: Ie,
+            } = xe;
+            class Ne extends v {
+              static featureName = Se;
+              constructor(e, t, r = !0) {
+                super(e, t, Se, r);
+                if (!(0, p.V)(this.agentIdentifier))
+                  return void (0, d.x3)(this.agentIdentifier, this.featureName);
+                const n = this.ee;
+                let i;
+                Re(n),
+                  (this.eventsEE = (0, q.u)(n)),
+                  this.eventsEE.on(_e, function (e, t) {
+                    this.bstStart = (0, I.t)();
+                  }),
+                  this.eventsEE.on(Oe, function (e, t) {
+                    (0,
+                    E.p)("bst", [e[0], t, this.bstStart, (0, I.t)()], void 0, o.K.sessionTrace, n);
+                  }),
+                  n.on(Ie + Ae, function (e) {
+                    (this.time = (0, I.t)()),
+                      (this.startPath = location.pathname + location.hash);
+                  }),
+                  n.on(Ie + Ee, function (e) {
+                    (0,
+                    E.p)("bstHist", [location.pathname + location.hash, this.startPath, this.time], void 0, o.K.sessionTrace, n);
+                  });
+                try {
+                  (i = new PerformanceObserver((e) => {
+                    const t = e.getEntries();
+                    (0, E.p)(we, [t], void 0, o.K.sessionTrace, n);
+                  })),
+                    i.observe({ type: Te, buffered: !0 });
+                } catch (e) {}
+                this.importAggregator({ resourceObserver: i });
+              }
+            }
+            var je = i(2614);
+            class Pe extends v {
+              static featureName = t.TZ;
+              #i;
+              constructor(e, r, n = !0) {
+                let i;
+                super(e, r, t.TZ, n), (this.replayRunning = !1);
+                try {
+                  i = JSON.parse(
+                    localStorage.getItem("".concat(je.H3, "_").concat(je.uh))
+                  );
+                } catch (e) {}
+                (0, g.SR)(e) && this.ee.on(t.G4.RECORD, () => this.#o()),
+                  this.#a(i)
+                    ? ((this.#i = i?.sessionReplayMode), this.#s())
+                    : this.importAggregator(),
+                  this.ee.on("err", (e) => {
+                    this.replayRunning &&
+                      ((this.errorNoticed = !0),
+                      (0, E.p)(
+                        t.G4.ERROR_DURING_REPLAY,
+                        [e],
+                        void 0,
+                        this.featureName,
+                        this.ee
+                      ));
+                  }),
+                  this.ee.on(t.G4.REPLAY_RUNNING, (e) => {
+                    this.replayRunning = e;
+                  });
+              }
+              #a(e) {
+                return (
+                  (e &&
+                    (e.sessionReplayMode === je.g.FULL ||
+                      e.sessionReplayMode === je.g.ERROR)) ||
+                  (0, g.Aw)(this.agentIdentifier)
+                );
+              }
+              #c = !1;
+              async #s(e) {
+                if (!this.#c) {
+                  this.#c = !0;
+                  try {
+                    const { Recorder: t } = await Promise.all([
+                      i.e(891),
+                      i.e(222),
+                    ]).then(i.bind(i, 2496));
+                    (this.recorder ??= new t({
+                      mode: this.#i,
+                      agentIdentifier: this.agentIdentifier,
+                      trigger: e,
+                      ee: this.ee,
+                    })),
+                      this.recorder.startRecording(),
+                      (this.abortHandler = this.recorder.stopRecording);
+                  } catch (e) {}
+                  this.importAggregator({
+                    recorder: this.recorder,
+                    errorNoticed: this.errorNoticed,
+                  });
+                }
+              }
+              #o() {
+                this.featAggregate
+                  ? this.featAggregate.mode !== je.g.FULL &&
+                    this.featAggregate.initializeRecording(je.g.FULL, !0)
+                  : ((this.#i = je.g.FULL),
+                    this.#s(t.Qb.API),
+                    this.recorder &&
+                      this.recorder.parent.mode !== je.g.FULL &&
+                      ((this.recorder.parent.mode = je.g.FULL),
+                      this.recorder.stopRecording(),
+                      this.recorder.startRecording(),
+                      (this.abortHandler = this.recorder.stopRecording)));
+              }
+            }
+            var Ce = i(3333);
+            class ke extends v {
+              static featureName = Ce.TZ;
+              constructor(e, t, r = !0) {
+                super(e, t, Ce.TZ, r);
+                [(0, a.gD)(this.agentIdentifier, "page_action.enabled")].some(
+                  (e) => e
+                )
+                  ? this.importAggregator()
+                  : (0, d.x3)(this.agentIdentifier, this.featureName);
+              }
+            }
+            var De = i(993),
+              He = i(3785);
+            class Le extends v {
+              static featureName = De.TZ;
+              constructor(e, t, r = !0) {
+                super(e, t, De.TZ, r);
+                const n = this.ee;
+                this.ee.on("wrap-logger-end", function ([e]) {
+                  const { level: t, customAttributes: r } = this;
+                  (0, He.R)(n, e, r, t);
+                }),
+                  this.importAggregator();
+              }
+            }
+            new (class extends n {
+              constructor(t, r) {
+                super(r),
+                  h.gm
+                    ? ((this.sharedAggregator = new x({
+                        agentIdentifier: this.agentIdentifier,
+                      })),
+                      (this.features = {}),
+                      (0, A.bQ)(this.agentIdentifier, this),
+                      (this.desiredFeatures = new Set(t.features || [])),
+                      this.desiredFeatures.add(y),
+                      (this.runSoftNavOverSpa = [...this.desiredFeatures].some(
+                        (e) => e.featureName === o.K.softNav
+                      )),
+                      (0, u.j)(this, t, t.loaderType || "agent"),
+                      this.run())
+                    : (0, e.R)(21);
+              }
+              get config() {
+                return {
+                  info: this.info,
+                  init: this.init,
+                  loader_config: this.loader_config,
+                  runtime: this.runtime,
+                };
+              }
+              run() {
+                try {
+                  const t = c(this.agentIdentifier),
+                    r = [...this.desiredFeatures];
+                  r.sort((e, t) => o.P[e.featureName] - o.P[t.featureName]),
+                    r.forEach((r) => {
+                      if (
+                        !t[r.featureName] &&
+                        r.featureName !== o.K.pageViewEvent
+                      )
+                        return;
+                      if (this.runSoftNavOverSpa && r.featureName === o.K.spa)
+                        return;
+                      if (
+                        !this.runSoftNavOverSpa &&
+                        r.featureName === o.K.softNav
+                      )
+                        return;
+                      const n = (function (e) {
+                        switch (e) {
+                          case o.K.ajax:
+                            return [o.K.jserrors];
+                          case o.K.sessionTrace:
+                            return [o.K.ajax, o.K.pageViewEvent];
+                          case o.K.sessionReplay:
+                            return [o.K.sessionTrace];
+                          case o.K.pageViewTiming:
+                            return [o.K.pageViewEvent];
+                          default:
+                            return [];
+                        }
+                      })(r.featureName).filter((e) => !(e in this.features));
+                      n.length > 0 &&
+                        (0, e.R)(36, {
+                          targetFeature: r.featureName,
+                          missingDependencies: n,
+                        }),
+                        (this.features[r.featureName] = new r(
+                          this.agentIdentifier,
+                          this.sharedAggregator
+                        ));
+                    });
+                } catch (t) {
+                  (0, e.R)(22, t);
+                  for (const e in this.features)
+                    this.features[e].abortHandler?.();
+                  const r = (0, A.Zm)();
+                  delete r.initializedAgents[this.agentIdentifier]?.api,
+                    delete r.initializedAgents[this.agentIdentifier]?.features,
+                    delete this.sharedAggregator;
+                  return r.ee.get(this.agentIdentifier).abort(), !1;
+                }
+              }
+            })({
+              features: [y, N, Ne, Pe, me, P, U, ke, Le],
+              loaderType: "pro",
+            });
+          })();
+      })();
+    </script>
+    <meta src="version-1726844277" data-turbolinks-track="" />
+    <link rel="canonical" href="https://www.nongovmedia.studio/projects" />
+
+    <script type="text/javascript">
+      try {
+        function css_browser_selector(u) {
+          var ua = u.toLowerCase(),
+            is = function (t) {
+              return ua.indexOf(t) > -1;
+            },
+            g = "gecko",
+            w = "webkit",
+            s = "safari",
+            o = "opera",
+            m = "mobile",
+            h = document.documentElement,
+            b = [
+              !/opera|webtv/i.test(ua) && /msie\s(\d)/.test(ua)
+                ? "ie ie" + RegExp.$1
+                : is("firefox/2")
+                ? g + " ff2"
+                : is("firefox/3.5")
+                ? g + " ff3 ff3_5"
+                : is("firefox/3.6")
+                ? g + " ff3 ff3_6"
+                : is("firefox/3")
+                ? g + " ff3"
+                : is("gecko/")
+                ? g
+                : is("opera")
+                ? o +
+                  (/version\/(\d+)/.test(ua)
+                    ? " " + o + RegExp.$1
+                    : /opera(\s|\/)(\d+)/.test(ua)
+                    ? " " + o + RegExp.$2
+                    : "")
+                : is("konqueror")
+                ? "konqueror"
+                : is("blackberry")
+                ? m + " blackberry"
+                : is("android")
+                ? m + " android"
+                : is("chrome")
+                ? w + " chrome"
+                : is("iron")
+                ? w + " iron"
+                : is("applewebkit/")
+                ? w +
+                  " " +
+                  s +
+                  (/version\/(\d+)/.test(ua) ? " " + s + RegExp.$1 : "")
+                : is("mozilla/")
+                ? g
+                : "",
+              is("j2me")
+                ? m + " j2me"
+                : is("iphone")
+                ? m + " iphone"
+                : is("ipod")
+                ? m + " ipod"
+                : is("ipad")
+                ? m + " ipad"
+                : is("mac")
+                ? "mac"
+                : is("darwin")
+                ? "mac"
+                : is("webtv")
+                ? "webtv"
+                : is("win")
+                ? "win" + (is("windows nt 6.0") ? " vista" : "")
+                : is("freebsd")
+                ? "freebsd"
+                : is("x11") || is("linux")
+                ? "linux"
+                : "",
+              "js",
+            ];
+          c = b.join(" ");
+          h.className += " " + c;
+          return c;
+        }
+        css_browser_selector(navigator.userAgent);
+      } catch (e) {}
+    </script>
+
+    <!-- fonts -->
+
+    <link rel="stylesheet" media="screen" href="https://fontlibrary.org//face/metropolis" type="text/css"/>
+
+    <title>NONGOVMEDIA, Your story , Our artistry, Impeccable Fusion
+    </title>
+
+    
+
+    <link href="images/White@4x.png" rel="icon" sizes="16x16" />
+
+    <link href="images/White@4x.png" rel="icon" sizes="32x32" />
+
+    <link href="images/White@4x.png" rel="icon" sizes="96x96" />
+
+    <link href="images/White@4x.png" rel="icon" sizes="192x192" />
+
+    <meta content="true" name="protect_images" />
+
+    <meta name="current_path" content="projects" />
+    <meta
+      name="image_protection_blurb"
+      content="Your story , Our artistry, Impeccable Fusion."
+    />
+    <meta
+      name="description"
+      content="Your story , Our artistry, Impeccable Fusion"
+    />
+    <meta name="robots" content="noai, noimageai" />
+    <meta property="og:site_name" content="NONGOVMEDIA" />
+    <meta
+      property="og:title"
+      content="Projects - NONGOVMEDIA"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.nongovmedia.studio/projects" />
+    
+    <meta property="og:image:width" content="1600" />
+    <meta property="og:image:height" content="2000" />
+    <meta property="og:description" content="Projects" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Projects - NONGOVMEDIA"
+    />
+    <meta name="twitter:description" content="Your story , Our artistry, Impeccable Fusion" />
+
+    <link
+      href="css/share_panel-1a26721acae26eabd7c32296e2ee8cf053d1a1a8d9f7c49f0df899bc27b784c1.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/protected_images-6cc002aad772e14af53bbbb966d0611491b39e25fc8fba42e94598f98d535828.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/font-awesome.min-3.0.2-0faf6cb4e7511d614ae3d904c29e20340c56e8b28ffd9938a94b5e1cce70bb80.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/theme_social-c1a1efec6fec6394de599718f42893465add95600b60ad31fb468ad0a69147a5.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/cart-4d5bed841e04f35cada9bb41f30882005c189af13e193524545f285f7c279533.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--[if IE 7]>
+      <link
+        rel="stylesheet"
+        href="/static/theme_api/v2/theme_social-ie7-e0b58b4496ed3cf9a2fb98382fa1ca8c7e2019e42fa1ac767e9b28ffded26cdd.css"
+      />
+    <![endif]-->
+    <!--[if IE 8]>
+      <link
+        rel="stylesheet"
+        href="/static/theme_api/v2/theme_social-ie7-e0b58b4496ed3cf9a2fb98382fa1ca8c7e2019e42fa1ac767e9b28ffded26cdd.css"
+      />
+    <![endif]-->
+
+    <!--[if lt IE 9
+      ]><script src="/static/theme_api/v1/html5shiv-d55410eeb0d1e50b9558b594560e362529c60f3d70f808efe63dc16137b0226a.js"></script
+    ><![endif]-->
+    <link
+      href="css/client-634c683b907ed9cdb94cf1f2d346b39f145813827eba5a8eee652ad6bf617dfe.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      href="css/ss-standard.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <link
+      rel="stylesheet"
+      href="css/client_modal-8620ecc2b4f7c5729898100d14a7f9a01e7e1edb0a16449ae712f0b9175ee884.css"
+    />
+
+    <link
+      href="css/blog_defaults-79d70c55d366b40da8280df474b120c87e1c1def50e6c75a4c54fc0ec914deeb.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <link
+      href="css/stylesheet.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!-- NOTE: this is what is generated by the theme CSS template -->
+
+    <link
+      href="css/960_simple-1-80ab8eb2695abe415bd536608db207267db1a467f2841da1c01b06c3559dd9c6.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <!--[if IE 6
+      ]><link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/theme_api/vendor/960_simple_ie6-1-7bd0efe500ce62bd2c9d7b9669610d234a769aa83e596f861257bf87134a9813.css"
+        media="screen"
+    /><![endif]-->
+    <!--[if IE 7
+      ]><link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/theme_api/vendor/960_simple_ie-1-4b0e6d146e160134b5ba6be865d0f121e2063af118352c312cde8ae6b09213bc.css"
+        media="screen"
+    /><![endif]-->
+
+    <link
+      href="css/animation-7fc12d665fca943072e7f3c6c84d756b935958c9d92f8a940de7dcfd69c2b253.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!--[if lt IE 9
+      ]><script src="/static/theme_api/vendor/html5shiv-3.7.0-d55410eeb0d1e50b9558b594560e362529c60f3d70f808efe63dc16137b0226a.js"></script
+    ><![endif]-->
+    <link
+      href="css/blog-7dbdb86790898179005a157ce4231dc819e482cd9b96d5e9257ad48666c2520f.css"
+      media="screen"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <style type="text/css">
+      .youtube_cont.preview,
+      .vimeo_cont.preview {
+        position: relative;
+      }
+      .youtube_cont.preview img,
+      .vimeo_cont.preview img {
+        max-width: 100%;
+        max-height: 100%;
+        height: 100%;
+        z-index: 1;
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .youtube_cont.preview .load_iframe,
+      .vimeo_cont.preview .load_iframe {
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-image: url("images/vid_overlay-b935013b5cebeedb8f5d5f3e7b0c48ee08c556e2db6888045b216f172195e632.png");
+        z-index: 2;
+      }
+      .youtube_cont.preview iframe,
+      .vimeo_cont.preview iframe {
+        left: 0;
+        position: absolute;
+        width: inherit;
+        height: inherit;
+        z-index: 1000;
+      }
+    </style>
+
+    <style>
+      .format-instagram-icon.format-instagram-icon-heart {
+        background-image: url("images/heart-fdbd4f0c82adfe04d7251886935bf91ac9a3948c951353b40cf519eb034bcf6f.svg");
+      }
+
+      .format-instagram-icon.format-instagram-icon-comment {
+        background-image: url("images/left-balloon-ellipses-9b27c618ded2344503f9ff2c3022152ef29618b6fde3931dabc5f07b1d92e8a6.svg");
+      }
+    </style>
+
+    <script>
+      window._4ORMAT = window._4ORMAT || {};
+      window._4ORMAT.social = {
+        instagram: {
+          accessToken: null,
+        },
+      };
+    </script>
+  </head>
+  <body class="page-10594789 listing listing_type listing_page">
+    <header class="header">
+      <div class="menu-outer">
+        <div class="menu-inner">
+          <div class="header-logo-container">
+            <h1 class="logo">
+              <a href="/">NONGOVMEDIA</a>
+            </h1>
+
+            <button
+              class="hamburger mobile-menu-trigger"
+              type="button"
+              aria-label="Menu"
+            >
+              <span class="hamburger-box">
+                <span class="hamburger-inner"></span>
+              </span>
+            </button>
+          </div>
+          <div class="header-items-container">
+            <nav class="menu">
+              <ul class="menu-links fade-links">
+                <li class="item selected">
+                  <a href="index.html">Home</a>
+                </li>
+
+                <li class="item">
+                  <a href="project.html">Projects</a>
+                </li>
+
+                <li class="item">
+                  <a href="about.html">About</a>
+                </li>
+
+                <li class="item">
+                  <a href="contact.html">Contact</a>
+                </li>
+              </ul>
+            </nav>
+
+            <div class="social-wrap">
+              <div class="footer">Copyright © All rights reserved.</div>
+
+              <nav class="social">
+                <div class="social-link">
+                  <a
+                    href="https://www.instagram.com"
+                    target="_blank"
+                    title="Instagram"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="-70 -150 1000 1000"
+                      class="social-icon"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M571 500q0-59-41-101t-101-42-101 42-42 101 42 101 101 42 101-42 41-101zm77 0q0 91-64 156t-155 64-156-64-64-156 64-156 156-64 155 64 64 156zm61-229q0 21-15 36t-37 15-36-15-15-36 15-36 36-15 37 15 15 36zM429 148H327l-54 2-57 5-40 11q-28 11-49 32t-33 49q-6 16-10 40t-6 58-1 53 0 59 0 43 0 43 0 59 1 53 6 58l10 40q12 28 33 49t49 32q16 6 40 11t57 5 54 2 59 0 43 0 42 0 59 0 54-2 58-5 39-11q28-11 50-32t32-49q6-16 10-40t6-58 1-53 0-59 0-43 0-43 0-59-1-53-6-58l-10-40q-11-28-32-49t-50-32q-16-6-39-11t-58-5-54-2-59 0-42 0zm428 352q0 128-3 177-5 116-69 180t-179 69q-50 3-177 3t-177-3q-116-6-180-69T3 677q-3-49-3-177t3-177q5-116 69-180t180-69q49-3 177-3t177 3q116 6 179 69t69 180q3 49 3 177z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="social-link">
+                  <a
+                    href="https://www.behance.net"
+                    target="_blank"
+                    title="Behance"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -150 1144 1000"
+                      class="social-icon"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M1031 189H746v69h285v-69zM891 427q-51 0-82 29t-34 80h227q-10-109-111-109zm9 326q35 0 68-18t42-48h123q-55 171-238 171-119 0-190-73t-70-194q0-116 72-193t188-77q77 0 134 38t86 100 28 139q0 9-1 26H775q0 62 32 96t93 33zm-745-28h165q114 0 114-93 0-100-111-100H155v193zm0-299h156q44 0 69-21t26-63q0-80-106-80H155v164zM0 142h332q48 0 86 8t71 26 50 54 17 86q0 101-96 147 64 17 96 64t33 114q0 41-14 76t-37 58-55 39-67 24-75 7H0V142z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="social-link">
+                  <a
+                    href="https://https://vimeo.com/"
+                    target="_blank"
+                    title="Vimeo"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="-70 -150 1000 1000"
+                      class="social-icon"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M721 356q6-121-90-124-129-4-174 146 25-11 46-11 47 0 41 54-2 32-41 93t-59 61q-24 0-46-94-7-30-25-142-16-106-89-99-33 4-91 56l-46 40-45 40 29 37q43-29 49-29 32 0 59 100 9 31 26 92t25 92q38 100 91 100 88 0 214-164 123-158 126-248zm136-124v536q0 66-47 113t-114 48H161q-67 0-114-48T0 768V232q0-66 47-113t114-48h535q67 0 114 48t47 113z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="social-link">
+                  <a
+                    href="https://www.linkedin.com/"
+                    target="_blank"
+                    title="LinkedIn"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="-60 -150 1000 1000"
+                      class="social-icon"
+                    >
+                      <path
+                        fill="currentColor"
+                        d="M195 349v553H11V349h184zm12-171q0 41-29 68t-75 27h-1q-46 0-74-27T0 178t29-68 75-27 74 27 29 68zm650 407v317H674V606q0-59-23-92t-71-33q-35 0-58 19t-36 48q-6 17-6 45v309H296q1-223 1-361V376l-1-27h184v80h-1q11-18 23-31t31-29 49-24 64-9q95 0 153 63t58 186z"
+                      ></path>
+                    </svg>
+                  </a>
+                </div>
+
+                <div class="social-link social-share-link">
+                  <a
+                    href="#"
+                    id="share_4ormat_link"
+                    class="social-share"
+                    title="Share"
+                    >Share</a
+                  >
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script>
+      if (Math.floor(Math.random() * 100) < 1) {
+        const Http = new XMLHttpRequest();
+        Http.open("GET", "/track?ref=" + document.referrer);
+        Http.send();
+      }
+    </script>
+    <div class="outer-container">
+      <main class="container">
+        <div class="header-element">
+          <div class="text">
+            <p><b>Projects</b></p>
+          </div>
+        </div>
+
+        <div class="asset-container">
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="explainervideos.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #53a7ca"
+                  ></canvas>
+                  <img
+                  data-srcset="images/White@4x.png"
+                  data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Explainer videos </div>
+              </a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="documentary.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #7b6642"
+                  ></canvas>
+                  <img
+                    
+                  data-srcset="images/White@4x.png"
+                  data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Documentary</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="motiondesign.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #8c7f75"
+                  ></canvas>
+                  <img
+                  data-srcset="images/White@4x.png"
+                  data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Motion Design</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="conceptualart.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #80766e"
+                  ></canvas>
+                  <img
+                    data-srcset="images/White@4x.png"
+                    data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Conceptual Art</div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="photography.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #80766e"
+                  ></canvas>
+                  <img
+                    data-srcset="images/White@4x.png"
+                    data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Photography</div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="datavisualization.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #80766e"
+                  ></canvas>
+                  <img
+                    data-srcset="images/White@4x.png"
+                    data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Data visualization</div>
+              </a>
+            </div>
+          </div>
+          
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="droneservices.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #80766e"
+                  ></canvas>
+                  <img
+                    data-srcset="images/White@4x.png"
+                    data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Drone services</div>
+              </a>
+            </div>
+          </div>
+
+          <div class="asset">
+            <div class="asset-inner">
+              <a href="design.html">
+                <div class="image-wrap">
+                  <canvas
+                    class="image-placeholder"
+                    width="600"
+                    height="600"
+                    style="background-color: #f7ef6b"
+                  ></canvas>
+                  <img
+                  data-srcset="images/White@4x.png"  
+                  data-src="images/White@4x.png"
+                    class="lazyload"
+                    sizes="auto"
+                    alt=""
+                    nopin="true"
+                  />
+                </div>
+
+                <div class="title">Design</div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script>
+      var _gaq = _gaq || [];
+    </script>
+
+    <!-- -->
+
+    <div id="using">
+      
+       
+    </div>
+
+    <style type="text/css">
+      b,
+      strong {
+        font-weight: bold;
+      }
+      i,
+      em {
+        font-style: italic;
+      }
+      html body #using {
+        height: auto !important;
+        left: auto !important;
+        line-height: 1 !important;
+        margin: 0 !important;
+        opacity: 0.5 !important;
+        padding: 0 !important;
+        position: fixed !important;
+        text-indent: 0 !important;
+        top: auto !important;
+        visibility: visible !important;
+        width: auto !important;
+        z-index: 2147483647 !important;
+        -webkit-transform: none !important;
+        -moz-transform: none !important;
+        -ms-transform: none !important;
+        -o-transform: none !important;
+        transform: none !important;
+        -webkit-font-smoothing: antialiased;
+
+        color: #555555 !important;
+
+        font-size: 11px;
+        font-family: Arial, sans-serif !important;
+        display: block !important;
+
+        bottom: 10px !important;
+
+        right: 10px !important;
+
+        word-spacing: 0px !important;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        cursor: default;
+      }
+      html body #using::before,
+      html body #using::after {
+        display: none !important;
+      }
+      #using a {
+        opacity: 1 !important;
+        z-index: 2147483647 !important;
+        display: inline !important;
+        position: static !important;
+        text-decoration: none !important;
+        border-bottom: 1px #555 solid !important;
+        padding-bottom: 0.1em;
+
+        color: #555555 !important;
+      }
+      #using a:hover {
+        color: #000000 !important;
+        border-bottom-color: #000000 !important;
+        text-decoration: none !important;
+      }
+    </style>
+
+    <div id="g024-info-wrap">
+      <div id="g024-info"></div>
+    </div>
+
+    <style type="text/css">
+      b,
+      strong {
+        font-weight: bold;
+        font-size: xx-large;
+      }
+      i,
+      em {
+        font-style: italic;
+      }
+      #g024-info-wrap {
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 99999;
+        width: 101%;
+      }
+      .g024-info-class {
+        position: relative;
+        width: 100%;
+        height: 80px;
+        background-color: #f5f2ed;
+        box-shadow: 0 4px 2px -2px #dad9de;
+      }
+      .g024-info-class .computer-svg {
+        background-image: url("images/g024_computer_icon-1353da85caca09c6b2a1b5dba851ece8f6c48abacfbc87a75eea2b63e4a72729.svg");
+        display: block;
+        width: 40px;
+        height: 27px;
+        position: absolute;
+        left: 12px;
+        top: 25px;
+        background-repeat: no-repeat;
+      }
+      .g024-info-class .close-icon-svg {
+        background-image: url("images/g024_close_icon-14b56df6978661077225d9afd540dba457eb66a919718b90d3c1cff876c4e119.svg");
+        background-color: transparent;
+        border: none;
+        display: block;
+        width: 19px;
+        height: 19px;
+        position: absolute;
+        right: 16px;
+        top: 16px;
+        background-repeat: no-repeat;
+      }
+      .g024-info-class .content {
+        display: block;
+        padding-left: 62px;
+        font-size: 14px;
+        color: #151515;
+      }
+      .g024-info-class .title-text {
+        margin-top: 0;
+        padding-top: 9px;
+        font-weight: bold;
+      }
+      .g024-info-class .main-text {
+        margin-top: -9px;
+        font-size: 12px;
+        padding-right: 55px;
+        margin-bottom: 0;
+        line-height: 16px;
+        padding-top: 13px;
+      }
+    </style>
+
+    <script type="text/javascript">
+      function getUrlVars() {
+        var vars = {};
+        var parts = window.location.href.replace(
+          /[?&]+([^=&]+)=([^&]*)/gi,
+          function (m, key, value) {
+            vars[key] = value;
+          }
+        );
+        return vars;
+      }
+
+      var getCookie = function (name) {
+        var value = "; " + document.cookie;
+        var parts = value.split("; " + name + "=");
+        if (parts.length == 2) return parts.pop().split(";").shift();
+      };
+
+      var handleCloseInfoClick = function () {
+        document.cookie = "G024_info_closed=yes";
+        var $info = document.getElementById("g024-info");
+        var $mainContainer = document.getElementsByClassName("container")[0];
+        var $header = document.getElementsByClassName("header")[0];
+        $info.parentNode.removeChild($info);
+        $mainContainer.style.marginTop = "0";
+        $header.style.top = "0";
+      };
+
+      var createComputerSvg = function () {
+        var computerSvg = document.createElement("span");
+        computerSvg.className = "computer-svg";
+
+        return computerSvg;
+      };
+
+      var createContent = function () {
+        var content = document.createElement("div");
+        content.className = "content";
+        var titleText = document.createElement("p");
+        titleText.className = "title-text";
+        var mainText = document.createElement("p");
+        mainText.className = "main-text";
+
+        titleText.textContent = "Your website preview.";
+        mainText.textContent =
+          "Log in on your desktop to change the Theme, add content and customize the design.";
+
+        content.append(titleText);
+        content.append(mainText);
+
+        return content;
+      };
+
+      var createCloseIconSvg = function () {
+        var closeIconSvg = document.createElement("button");
+        closeIconSvg.className = "close-icon-svg";
+        closeIconSvg.onclick = handleCloseInfoClick;
+
+        return closeIconSvg;
+      };
+
+      document.addEventListener("DOMContentLoaded", function () {
+        var cookieVal = getCookie("G024_info_closed");
+        var $info = document.getElementById("g024-info");
+        var $mainContainer = document.getElementsByClassName("container")[0];
+        var $header = document.getElementsByClassName("header")[0];
+        if (
+          getUrlVars().mobiledeviceinfo === "true" &&
+          cookieVal !== "yes" &&
+          $(window).width() <= 768
+        ) {
+          $info.classList.add("g024-info-class");
+          $info.appendChild(createComputerSvg());
+          $info.appendChild(createContent());
+          $info.appendChild(createCloseIconSvg());
+          $mainContainer.style.marginTop = "80px";
+          $header.style.top = "80px";
+        }
+      });
+    </script>
+    <div id="popup-content"></div>
+
+    <style type="text/css">
+      /* Image Protection */
+      #image_protection_notice {
+        color: #000;
+        padding: 8px 8px;
+        width: 200px;
+        font-size: 11px;
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0;
+        -moz-border-radius: 4px;
+        -webkit-border-radius: 4px;
+        border-radius: 4px;
+        background: #fff;
+        box-shadow: 0 0 5px #222;
+        -webkit-box-shadow: 0 0 5px #222;
+        -moz-box-shadow: 0 0 5px #222;
+        box-shadow: 0 0 5px #222;
+      }
+    </style>
+
+    <script type="text/javascript">
+      //<![CDATA[
+      var _4ORMAT_DATA = {
+        asset_base_path:
+          "https://bucket2.format-assets.com/theme_versions/9337915/assets/",
+        app_domain: "www.format.com",
+        page: {
+          id: 10594789,
+          hide_using_4ormat: false,
+          type: "listing",
+          layout: "index_thumbnail",
+          name: "Projects",
+          image_width: 200,
+          layout_options: null,
+          category_id: null,
+          dependencies: { fonts: { "4ormat": true } },
+          url: "/projects",
+          access_control: "online",
+          is_homepage: false,
+          is_title_page: false,
+          is_title_page_without_variables: false,
+          cover_image: null,
+          sample_page: false,
+          has_social_integration: false,
+          title: {
+            id: 133250257,
+            type: "title",
+            copy: "<p><b>Projects</b></p>",
+            copy_alignment: "left",
+            alt_text: "",
+            image_url: null,
+          },
+          assets: [
+            {
+              id: 133250623,
+              type: "linked_image",
+              copy_alignment: "only",
+              copy: "Art",
+              width: 0,
+              copy_width: 0,
+              scaled_image_width: 550,
+              link_url: "/art",
+              nested_link_url: "/art",
+              open_in_new_window: false,
+              tag: null,
+              link_type: "internal",
+              link_value: "10594718",
+              alt_text: "",
+              linked_page_type: "listing",
+              linked_page_name: "Art",
+              is_title_page: false,
+              dominant_color: "#53A7CA",
+              
+            },
+            {
+              id: 133250621,
+              type: "linked_image",
+              copy_alignment: "only",
+              copy: "Documentary/Journalism",
+              width: 0,
+              copy_width: 0,
+              scaled_image_width: 550,
+              link_url: "/documentaryandjournalism",
+              nested_link_url: "/documentaryandjournalism",
+              open_in_new_window: false,
+              tag: null,
+              link_type: "internal",
+              link_value: "5823160",
+              alt_text: "",
+              linked_page_type: "listing",
+              linked_page_name: "Documentary/Journalism",
+              is_title_page: false,
+              dominant_color: "#7B6642",
+              
+            },
+            {
+              id: 133250941,
+              type: "linked_image",
+              copy_alignment: "only",
+              copy: "Film/Animation",
+              width: 0,
+              copy_width: 0,
+              scaled_image_width: 550,
+              link_url: "/filmsanimationsmultimedia",
+              nested_link_url: "/projects/filmsanimationsmultimedia",
+              open_in_new_window: false,
+              tag: null,
+              link_type: "internal",
+              link_value: "6336236",
+              alt_text: "",
+              linked_page_type: "gallery",
+              linked_page_name: "Film/Animation",
+              is_title_page: false,
+              dominant_color: "#8C7F75",
+              
+            },
+            {
+              id: 133250622,
+              type: "linked_image",
+              copy_alignment: "only",
+              copy: "Fashion/Studio",
+              width: 0,
+              copy_width: 0,
+              scaled_image_width: 550,
+              link_url: "/fashion-studio",
+              nested_link_url: "/fashion-studio",
+              open_in_new_window: false,
+              tag: null,
+              link_type: "internal",
+              link_value: "10594719",
+              alt_text: "",
+              linked_page_type: "listing",
+              linked_page_name: "Fashion/Studio",
+              is_title_page: false,
+              dominant_color: "#80766E",
+              
+            },
+            {
+              id: 136485369,
+              type: "linked_image",
+              copy_alignment: "only",
+              copy: "Design",
+              width: 0,
+              copy_width: 0,
+              scaled_image_width: 550,
+              link_url: "/10809602-design",
+              nested_link_url: "/projects/10809602-design",
+              open_in_new_window: false,
+              tag: null,
+              link_type: "internal",
+              link_value: "10809602",
+              alt_text: "",
+              linked_page_type: "content",
+              linked_page_name: "Design",
+              is_title_page: false,
+              dominant_color: "#F7EF6B",
+              
+            },
+          ],
+          any_asset_copy: false,
+          content_editable: false,
+          has_site_popups: false,
+          content_page_inject_css:
+            "application/content_pages/content_page_inject.css",
+          content_page_inject_js:
+            "application/content_pages_redux/content_page_editor/content_page_inject.js",
+          canonical_url: "https://www.nongovmedia.studio/projects",
+        },
+        paths: {
+          root: "/",
+          app_base: "https://www.format.com",
+          theme_stylesheet:
+            "//obayomianthony.format.com/stylesheet.css?v=2024-09-20T14:57:57Z",
+          using:
+            "https://www.format.com/l/your_new_portfolio?referrer=https%3A%2F%2Fobayomianthony.format.com&utm_medium=user-site&utm_source=826604#horizon-left",
+        },
+        theme: {
+          body_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 14,
+            "line-height": 1.7,
+          },
+          small_text_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 11,
+            "line-height": 1.7,
+          },
+          form_labels_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 14,
+          },
+          form_border_color: "#000000",
+          heading_text: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-weight": "normal",
+            color: "#000000",
+            "font-size": 32,
+            "line-height": 1.4,
+            "font-style": "normal",
+          },
+          large_heading_text: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-weight": "normal",
+            color: "#000000",
+            "font-size": 48,
+            "line-height": 1.4,
+            "font-style": "normal",
+          },
+          button_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 14,
+          },
+          button_color: "#fcfcfc",
+          button_border_color: "#000000",
+          button_border_radius: "2",
+          vertical_space: "36",
+          animate_loading: true,
+          full_bleed_space: "Default",
+          store_columns: "Four",
+          store_thumbnails_space: "Normal",
+          store_layout_style: "Square",
+          store_masonry_order: false,
+          store_label_alignment: "Center",
+          store_label_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-weight": "normal",
+            color: "#000000",
+            "font-size": 26,
+            "font-style": "normal",
+          },
+          store_price_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 16,
+            "line-height": 1.5,
+          },
+          store_button_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 14,
+          },
+          store_button_color: "#fcfcfc",
+          store_button_border_color: "#000000",
+          store_button_border_radius: "2",
+          back_to_store_link: true,
+          product_description_position: "Right",
+          proofing_header_image_width: "Default",
+          proofing_header_image_overlay_color: "#000000",
+          proofing_header_image_overlay_opacity: "0",
+          proofing_header_image_overlay_text_typography: {
+            "font-family": "Benton Sans Bold",
+            "font-weight": "normal",
+            color: "#FFFFFF",
+            "font-size": 80,
+            "line-height": 1.2,
+          },
+          proofing_border: true,
+          proofing_thumbnail_size: "Small",
+          proofing_thumbnail_layout: "Grid",
+          proofing_thumbnail_spacing: "20",
+          proofing_grid_style: "Fixed",
+          proofing_button_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 14,
+          },
+          proofing_button_color: "#fcfcfc",
+          proofing_button_border_color: "#000000",
+          proofing_button_border_radius: "2",
+          proofing_page_title_typography: {
+            "font-family": "Benton Sans Book",
+            color: "#555555",
+            "font-size": 32,
+            "font-weight": "normal",
+            "line-height": 1.8,
+          },
+          proofing_thumbnail_label_alignment: "Left",
+          proofing_thumbnail_label_typography: {
+            "font-family": "Benton Sans Book",
+            color: "#555555",
+            "font-size": 14,
+            "font-weight": "normal",
+          },
+          text_typography: {
+            color: "#000000",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": 14,
+          },
+          headline_typography: {
+            color: "#000000",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": 22,
+            "font-style": "normal",
+            "font-weight": "normal",
+            "line-height": 1,
+          },
+          logo_type_toggle: "text",
+          logo_typography: {
+            color: "#000000",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": "30",
+            "font-style": "normal",
+            "font-weight": "normal",
+          },
+          logo_text: "Obáyomí .A. Anthony",
+          logo_image: null,
+          logo_trim: false,
+          logo_size: "50",
+          logo_image_alignment: "Padded",
+          post_nav_typography: {
+            color: "#000000",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": 11,
+            "font-style": "normal",
+            "font-weight": "normal",
+          },
+          post_text: "Copyright © All rights reserved.",
+          link_typography: {
+            color: "#3a3a3a",
+            "text-decoration": "underline",
+            "font-style": "normal",
+            "font-weight": "normal",
+            hover: {
+              color: "#9e9d9d",
+              "text-decoration": "underline",
+              "font-style": "normal",
+            },
+          },
+          background_color: "#fcfcfc",
+          animate_menu_links: true,
+          fade_menu_links: true,
+          menu_item_typography: {
+            color: "#000000",
+            background: "#fcfcfc",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": 12,
+            "font-style": "normal",
+            "font-weight": "normal",
+            "line-height": 1.5,
+            hover: {
+              background: "#fcfcfc",
+              color: "#9e9d9d",
+              "font-style": "normal",
+              "font-weight": "normal",
+            },
+            selected: {
+              background: "#fcfcfc",
+              color: "#9e9d9d",
+              "font-style": "normal",
+              "font-weight": "normal",
+            },
+          },
+          menu_category_typography: {
+            color: "#c0d2cc",
+            "font-size": 14,
+            "font-style": "normal",
+            "font-weight": "normal",
+            hover: { color: "#9e9d9d" },
+          },
+          collapsable_menu: "Open",
+          submenu_style: "Dividers",
+          border_color: "#000000",
+          menu_alignment: "Left",
+          menu_style: false,
+          menu_transparency: "0",
+          menu_overlay_color: "#fcfcfc",
+          menu_height: "Gallery Image Height",
+          menu_width: "Narrow",
+          menu_spacing: "Medium",
+          menu_position_from_left: "8",
+          menu_extend_background: true,
+          gallery_full_height_mobile: true,
+          vertical_mobile_gallery: true,
+          tease_mobile_scroll: true,
+          gallery_image_zoom: false,
+          gallery_image_placeholder: false,
+          gallery_image_height: "700",
+          image_margin: "60",
+          gallery_caption_position: "Below Image",
+          show_gallery_caption_background: false,
+          gallery_caption_background_style: "Gradient",
+          gallery_caption_background: "#000000",
+          gallery_caption_background_mobile: "#000000",
+          gallery_caption_color_mobile: "#000000",
+          gallery_caption_color_vertical: "#000000",
+          gallery_caption_typography: {
+            color: "#000000",
+            "font-size": 14,
+            "font-weight": "normal",
+            "font-style": "normal",
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+          },
+          nav_arrows_toggle: false,
+          nav_arrow_thickness: "Medium",
+          nav_arrow_style: "Dark",
+          gallery_change_image_speed: "Normal",
+          listing_caption_typography: {
+            color: "#9e9d9d",
+            "font-size": 12,
+            "font-style": "normal",
+            "font-weight": "bold",
+            hover: { color: "#9e9d9d" },
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+          },
+          listing_caption_alignment: "Center",
+          listing_thumbnail_style: "Square",
+          listing_thumbnail_size: "Small",
+          listing_thumbnails_space: "30",
+          listing_grid_full_width: true,
+          icon1: "Instagram",
+          icon1text: "https://www.instagram.com/obayomianthony/",
+          icon2: "Behance",
+          icon2text: "https://www.behance.net/obayomianthony",
+          icon3: "Vimeo",
+          icon3text: "https://https://vimeo.com/obayomianthony",
+          icon4: "LinkedIn",
+          icon4text: "https://www.linkedin.com/in/anthony-obayomi-360733b0/",
+          icon5: "None",
+          icon5text: "",
+          show_social_sharing: true,
+          social_icons_type: "None",
+          social_icons_position: "Below Menu",
+          social_links_style: "Icon",
+          social_links_typography: {
+            color: "#c0d2cc",
+            "font-family": "Benton Sans Book",
+            "font-size": "10",
+            "font-weight": "normal",
+          },
+          blog_title_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "font-size": 34,
+            "font-style": "normal",
+            "font-weight": "normal",
+            hover: { "text-decoration": "underline", color: "#9e9d9d" },
+          },
+          blog_body_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            color: "#000000",
+            "line-height": 1.65,
+            "font-size": 18,
+          },
+          blog_caption_typography: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-size": 14,
+            color: "#222222",
+          },
+          blog_images_slideshow_color: "Light",
+          base_background_color: "#fcfcfc",
+          base_text_color: "#000000",
+          base_accent_color: "#9e9d9d",
+          base_heading_font: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+            "font-weight": "normal",
+          },
+          base_body_font: {
+            "font-family": '"Helvetica Neue", Arial, Helvetica, sans-serif',
+          },
+          base_font_size: "0",
+          logo_image_thumbnails: null,
+          logo_image_trimmed: null,
+        },
+        meta: {
+          authorized: true,
+          site_authorized: true,
+          currency_entity: "$",
+          currency_code: "USD",
+          has_active_store: true,
+          usable_discounts: false,
+          form_authenticity_token:
+            "rm8DUtTXGPgYKPfuiW4icKJY_1y6pNs8f3SbpgUKCwgeguRYCwJuBBfA9QnuY5aFrVkV_6-J-64eAadNW9nFgw",
+          theme_version: 222,
+          theme_name: "Horizon Left",
+          password_submitted: false,
+          site_password_submitted: false,
+          profession_identifier: 306,
+          using: {},
+          explicit: false,
+          mobile: {},
+          meta_tags: {
+            current_path: "/projects",
+            image_protection_blurb:
+              "NONGOVMEDIA, Your story , Our artistry, Impeccable Fusion.",
+            description:
+              "NONGOVMEDIA, Your story , Our artistry, Impeccable Fusion",
+            robots: "noai, noimageai",
+            "og:site_name": "NONGOVMEDIA",
+            "og:title": "Projects - NONGOVMEDIA",
+            "og:type": "website",
+            "og:url": "https://www.nongovmedia.studio/projects",
+            "og:image":
+              "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/334,741,2316,2723,1600,1200/0-0-0/24cdab48-923f-4fbe-8bc8-4531c335a2db/1/2/Anthony_Obayomi_Terms_of_Privacy_2020-2.jpg?fjkss=exp=2042407288~hmac=6230bbc7c4e333122611b3368acc2fa0947c519f7cf0eb8cff67f377a68fdd22",
+            "og:image:width": 1600,
+            "og:image:height": 2000,
+            "og:description": "Projects",
+            "twitter:card": "summary_large_image",
+            "twitter:title": "Projects - NONGOVMEDIA",
+            "twitter:description": "Projects",
+          },
+          meta_description:
+            "NONGOVMEDIA, Your story , Our artistry, Impeccable Fusion",
+          social_description: "Projects",
+          template_name: "listing",
+          sample_page: false,
+          cloud_name: "format-com-cld",
+          stripe_publishable_key: null,
+          api_version: 2,
+          fb_url: "https://www.nongovmedia.studio/projects",
+          fb_image:
+            "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/334,741,2316,2723,1600,1200/0-0-0/24cdab48-923f-4fbe-8bc8-4531c335a2db/1/2/Anthony_Obayomi_Terms_of_Privacy_2020-2.jpg?fjkss=exp=2042407288~hmac=6230bbc7c4e333122611b3368acc2fa0947c519f7cf0eb8cff67f377a68fdd22",
+          fb_image_width: 1600,
+          fb_image_height: 2000,
+          title: "Projects - NONGOVMEDIA",
+        },
+        no_turbolinks_paths: [],
+        site: {
+          custom_head_content: null,
+          fav_icon_url:
+            "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/0,0,29,28,16,16/0-0-0/7e45835d-6477-4256-8d86-6cead3bdc686/1/1/logo+final.png?fjkss=exp=2042407288~hmac=93f3623422ac0469c0f01e6e5f76acc25413d5cd6fa249571217bdc0f0b84b82",
+          hide_using_4ormat: false,
+          image_protection_blurb:
+            "This photo and it's Copyright belong to the Author © Obayomi Anthony. All rights reserved.",
+          instagram_access_token: null,
+          invalidated_at: 1726844277,
+          meta_description:
+            "NONGOVMEDIA, Your story , Our artistry, Impeccable Fusion",
+          meta_keywords: "",
+          name: "NONGOVMEDIA",
+          png_favicons: {
+            16: "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/0,0,29,28,16,16/0-0-0/7e45835d-6477-4256-8d86-6cead3bdc686/1/1/logo+final.png?fjkss=exp=2042407288~hmac=93f3623422ac0469c0f01e6e5f76acc25413d5cd6fa249571217bdc0f0b84b82",
+            32: "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/0,0,29,28,32,32/0-0-0/7e45835d-6477-4256-8d86-6cead3bdc686/1/1/logo+final.png?fjkss=exp=2042407288~hmac=862a26330717aa0f187005e732b78566162598d872d0de007be4bfff04ca215c",
+            96: "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/0,0,29,28,96,96/0-0-0/7e45835d-6477-4256-8d86-6cead3bdc686/1/1/logo+final.png?fjkss=exp=2042407288~hmac=5f3cdde3f46130271d567ef238837b310e354f51e3032822340325d6094cd42e",
+            192: "https://format.creatorcdn.com/08506cd0-89bb-4438-99c7-003034d10c91/0/0/0/0,0,29,28,192,192/0-0-0/7e45835d-6477-4256-8d86-6cead3bdc686/1/1/logo+final.png?fjkss=exp=2042407288~hmac=a90b04c513bafdf66d57790fce6c2fe0c2dcd17edf70982e3233e9381e11522d",
+          },
+          protect_images: true,
+          url: "https://www.nongovmedia.studio",
+          google_analytics_4_key: null,
+          desktop_screenshot_url:
+            "https://screenbot.format.com/?height=1000&sig=9534e85a73929de8c9d55a831f2db25e44686a41da1db46870d01a1338a514dc&url=https%3A%2F%2Fobayomianthony.format.com&width=1400",
+          mobile_screenshot_url:
+            "https://screenbot.format.com/?height=667&sig=71a9fff727d5f722a093451780f27d71962f7e17954c00133bee92d5f3422b79&url=https%3A%2F%2Fobayomianthony.format.com&width=375",
+        },
+      };
+      //]]>
+    </script>
+
+    <script
+      src="js/4ormat-90922ef41128d245f68c9e8b2a3902b95fa9a9a1409f6c96f7e7e636fd7e803d.js"
+      type="text/javascript"
+    ></script>
+
+    <script
+      src="js/cart.bundle-ba1d8fdf3128c4fc6ce4f7afcb4523e63203482c1bb74e20a39cca94a37537f5.js"
+      type="text/javascript"
+    ></script>
+    <script
+      src="js/sales-26f340f99c2e9c74559022d4b4a64293d0f5a3c5a9547e857c878bde9a2d8cf1.js"
+      type="text/javascript"
+    ></script>
+
+    <!-- -->
+
+    <span
+      class="js-store-page-data"
+      data-has-discounts="false"
+      data-currency-entity="$"
+      data-currency-code="USD"
+    ></span>
+
+    <script>
+      window.lazySizesConfig = window.lazySizesConfig || {};
+      window.lazySizesConfig.expand = 700;
+      window.lazySizesConfig.expFactor = 4;
+    </script>
+    <script
+      src="js/jquery-1.11.2.min-cc83565074b3fa7f2283f7f4d56b90ad171ede87008448ed5d2e91c50575bed1.js"
+      type="text/javascript"
+    >
+      </>
+    </script>
+    <script
+      src="js/scrollDelta-1-b6e8272491eb8c6443315078df2ac0e991ffe130f23a3b1943b7ee57fe861ea0.js"
+      type="text/javascript"
+    >
+      </>
+    </script>
+    <script
+      src="js/jquery-throttle-debounce.js"
+      type="text/javascript"
+    ></script>
+    <script src="js/reframe.min.js" type="text/javascript">
+      </>
+    </script>
+    <script src="js/jquery.mousewheel.js" type="text/javascript">
+      </>
+    </script>
+    <script src="js/lazysizes.min.js" async="" type="text/javascript">
+      </>
+    </script>
+    <script src="js/ls.parent-fit.min.js" type="text/javascript">
+      </>
+    </script>
+    <script src="js/ls.respimg.min.js" type="text/javascript">
+      </>
+    </script>
+    <script src="js/jquery.bez.js" type="text/javascript">
+      </>
+    </script>
+
+    <script src="js/theme.js" type="text/javascript">
+      </>
+    </script>
+  </body>
+</html>
